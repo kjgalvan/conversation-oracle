@@ -14,9 +14,9 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment className="App">
-      <Navigation />
-      <Game />
+      <React.Fragment>
+        <Navigation />
+        <Game name="John" />
       </React.Fragment>
     );
   }
