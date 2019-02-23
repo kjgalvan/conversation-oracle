@@ -19,17 +19,14 @@ class Game extends React.Component {
       response: null,
       gameOver: null,
       gameCounter: 0,
-      scenario: null,
-      next: [{ onClickHandler: this.nextSlide, text: "Next" }]
+      next: [{ onClick: this.nextSlide, text: "Next" }]
     }
+
     this.getExampleScenario = getExampleScenario.bind(this);
   }
 
   componentDidMount() {
-    this.setState({
-      ...this.state,
-      scenario: this.getScenario("GROCERY")
-    });
+    this.getExampleScenario();
   }
 
   nextSlide = () => {
@@ -43,7 +40,7 @@ class Game extends React.Component {
   getScenario = (scenario) => {
     switch(scenario) {
       case Scenario.grocery: {
-        return this.getExampleScenario();
+        // Return grocery scenario array
       }
 
       case Scenario.school: {
