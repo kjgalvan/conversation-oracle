@@ -1,6 +1,6 @@
 .Game{
     margin:auto;
     border: solid 1px;
-    min-width: 300vh;
-    min-height: 700vh;
+    min-width: .3vh;
+    min-height: .3vh;
 }
