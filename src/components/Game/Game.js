@@ -11,11 +11,27 @@ class Game extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      points: 0,
+      response: null,
+      gameOver: null,
+      gameCounter: 0,
+      next: [{ onClickHandler: this.nextSlide, text: "Next" }]
+    }
+
     this.getExampleScenario = getExampleScenario.bind(this);
   }
 
   componentDidMount() {
     this.getExampleScenario();
+  }
+
+  nextSlide = () => {
+    const { gameCounter } = this.state;
+    this.setState({
+      ...this.state,
+      gameCounter: gameCounter+1,
+    })
   }
 
   getScenario = (scenario) => {
