@@ -1,9 +1,10 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import './Game.css';
-import Dialog from '../Dialog/Dialog';
+import Dialog from '../Dialog';
 import Display from '../Display';
-import Score from '../Score/Score';
+import Score from '../Score';
+import Buttons from '../Buttons';
 import { Scenario } from '../../helpers/enums';
 import {
   getExampleScenario,
@@ -18,7 +19,7 @@ class Game extends React.Component {
       response: null,
       gameOver: null,
       gameCounter: 0,
-      next: [{ onClickHandler: this.nextSlide, text: "Next" }]
+      next: [{ onClick: this.nextSlide, text: "Next" }]
     }
 
     this.getExampleScenario = getExampleScenario.bind(this);
@@ -65,6 +66,9 @@ class Game extends React.Component {
           <Col>
             <Dialog />
           </Col>
+        </Row>
+        <Row>
+          <Buttons buttons={this.state.next} />
         </Row>
       </Container>
     );
