@@ -56,18 +56,18 @@ class Game extends React.Component {
     return (
       <Container className="Game">
         <Row>
-          <Col md={{size: 3, offset: 9}} >
+          <Col className="Score" md={{size: 3, offset: 9}} >
             <Score points="97" />
           </Col>
         </Row>
-        <Row>
+        <Row className="Display" >
           <Col>
-            <Display />
+            <Display  />
           </Col>
         </Row>
         <Row>
-          <Col>
-            <Dialog />
+          <Col className="Dialog">
+            <Dialog  />
           </Col>
         </Row>
         <Row>
