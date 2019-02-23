@@ -12,11 +12,18 @@ class App extends Component {
     }
   }
 
+  setScenario = (scenario) => {
+    this.setState({
+      ...this.state,
+      scenario
+    })
+  }
+
   render() {
     return (
       <React.Fragment>
-        <Navigation />
-        <Game name="John" />
+        <Navigation onClick={this.setScenario} />
+        <Game name="John" scenario={this.state.scenario} />
       </React.Fragment>
     );
   }

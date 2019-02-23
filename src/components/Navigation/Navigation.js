@@ -8,6 +8,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
+import { Scenario } from '../../helpers/enums';
 
 class Navigation extends React.Component {
   render() {
@@ -20,10 +21,10 @@ class Navigation extends React.Component {
             Scenarios
           </DropdownToggle>
           <DropdownMenu right>
-            <DropdownItem>
+            <DropdownItem  onClick={() => { this.props.onClick(Scenario.grocery) }} >
               Grocery Store
             </DropdownItem>
-            <DropdownItem>
+            <DropdownItem  onClick={() => { this.props.onClick(Scenario.school) }} >
               School
             </DropdownItem>
           </DropdownMenu>
