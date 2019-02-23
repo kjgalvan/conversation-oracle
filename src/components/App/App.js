@@ -4,6 +4,14 @@ import Navigation from '../Navigation/Navigation';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      scenario: null,
+    }
+  }
+
   render() {
     return (
       <React.Fragment className="App">

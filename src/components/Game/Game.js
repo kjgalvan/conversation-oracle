@@ -2,11 +2,7 @@ import React from 'react';
 import './Game.css';
 import Dialog from '../Dialog/Dialog';
 import Display from '../Display/Display';
-
-const Scenario = {
-    grocery: "GROCERY",
-    school: "SCHOOL"
-}
+import { Scenario } from '../../helpers/enums';
 
 class Game extends React.Component {
   componentDidMount() {
