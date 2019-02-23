@@ -1,12 +1,21 @@
 import React from 'react';
 import './Game.css';
 import Dialog from '../Dialog/Dialog';
-import Display from '../Display/Display';
+import Display from '../Display';
 import { Scenario } from '../../helpers/enums';
+import {
+  getExampleScenario,
+} from '../../helpers/scenarios';
 
 class Game extends React.Component {
-  componentDidMount() {
+  constructor(props) {
+    super(props);
 
+    this.getExampleScenario = getExampleScenario.bind(this);
+  }
+
+  componentDidMount() {
+    this.getExampleScenario();
   }
 
   getScenario = (scenario) => {
