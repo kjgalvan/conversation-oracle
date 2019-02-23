@@ -1,0 +1,7 @@
+.Navigation{
+    margin:auto;
+    border: solid 2px;
+    border-color: red;
+    min-width: .3vh;
+    min-height: .3vh;
+}
