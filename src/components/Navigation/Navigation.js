@@ -1,4 +1,5 @@
 import React from 'react';
+import './Navigation.css';
 import {
   Navbar,
   Nav,
@@ -13,7 +14,7 @@ import { Scenario } from '../../helpers/enums';
 class Navigation extends React.Component {
   render() {
     return (
-      <Navbar>
+      <Navbar className= "Nav">
         <NavbarBrand>conversation oracle</NavbarBrand>
         <Nav>
           <UncontrolledDropdown nav inNavbar>
