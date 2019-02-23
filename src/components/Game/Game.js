@@ -1,7 +1,9 @@
 import React from 'react';
+import { Container, Row, Col } from 'reactstrap';
 import './Game.css';
 import Dialog from '../Dialog/Dialog';
 import Display from '../Display';
+import Score from '../Score/Score';
 import { Scenario } from '../../helpers/enums';
 import {
   getExampleScenario,
@@ -32,10 +34,23 @@ class Game extends React.Component {
 
   render() {
     return (
-      <div className="Game">
-        <Display />
-        <Dialog />
-      </div>
+      <Container className="Game">
+        <Row>
+          <Col md={{size: 3, offset: 9}} >
+            <Score points="97" />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Display />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Dialog />
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

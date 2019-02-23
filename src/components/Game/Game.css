@@ -1,6 +1,19 @@
+.Navigation{
+    border: solid 2px;
+    border-color: red;
+}
 .Game{
     margin:auto;
-    border: solid 1px;
+    border: solid 2px;
+    border-color: orange;
     min-width: .3vh;
     min-height: .3vh;
+}
+.Display{
+    border: solid 2px;
+    border-color: green;
+}
+.Dialog{
+    border: solid 2px;
+    border-color: blue;
 }
