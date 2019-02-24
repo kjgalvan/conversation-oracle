@@ -1,5 +1,5 @@
 # Conversation Oracle
-## Coding Cougs 2019
+### Coding Cougs 2019
 
 [Live Demo](https://skillful-coast-232707.firebaseapp.com)
 
