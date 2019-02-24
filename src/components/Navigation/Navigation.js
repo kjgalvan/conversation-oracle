@@ -15,7 +15,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <Navbar className= "Nav">
-        <NavbarBrand>conversation oracle</NavbarBrand>
+        <NavbarBrand>Conversation Oracle</NavbarBrand>
         <Nav>
           <UncontrolledDropdown nav inNavbar>
           <DropdownToggle nav caret>
