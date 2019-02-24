@@ -133,11 +133,11 @@ class Game extends React.Component {
                   <Display key={this.state.character} className="d-flex justify-content-center Img" character={Characters.popo} emote={Emotes.happy} />
                 </Col>
               </Row>
-              <Row>
-                <Col>
+              <Row style={{ width: "100%" }}>
+                <Col className="Buttons">
                   <Button onClick={() => { this.setCharacter(Characters.nana); }}>Nana</Button>
                 </Col>
-                <Col>
+                <Col className="Buttons">
                   <Button onClick={() => { this.setCharacter(Characters.popo); }}>Popo</Button>
                 </Col>
               </Row>
