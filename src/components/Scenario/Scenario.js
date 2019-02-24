@@ -88,7 +88,7 @@ class Game extends React.Component {
     if (this.state.scenario) {
       if (this.state.scenario[this.state.gameCounter]) {
         return (
-          <Row>
+          <Row className="DisplayContainer">
             <Col>
               <Row>
                 <Col className="Score" md={{ size: 3, offset: 9 }}>

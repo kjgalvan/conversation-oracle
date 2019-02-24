@@ -96,15 +96,15 @@ class Game extends React.Component {
           <Row>
             <Col className="Dialog solo">
               <Dialog text={`Hi, ${this.props.name}! Please pick a scenario.`} />
-              <Buttons className="ButtonOverride Horizontal" buttons={this.state.scenarios} />
+              <Buttons className="ButtonOverride" buttons={this.state.scenarios} />
             </Col>
           </Row>
         );
       }
     } else {
       return (
-        <Row>
-          <Col className="Dialog solo">
+        <Row className="Dialog solo">
+          <Col>
             <Dialog text="My name is..." />
             <input autoFocus className="form-control" onBlur={this.setTempName} onKeyPress={this.onKeyPress} />
             <Button className="ButtonOverride Submit" onClick={this.onSubmit}>Submit</Button>
