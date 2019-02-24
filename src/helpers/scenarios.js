@@ -120,7 +120,7 @@ export function getGroceryScenario(name) {
               this.setState({
                 ...this.state,
                 gameCounter: gameCounter+1,
-                points: points + 1,
+                points: points + 2,
                 response: {
                   dialog: "I work at the local animal shelter, but my hear breaks every time we have put down one....",
                   emote: Emotes.sad,
@@ -437,7 +437,7 @@ export function getSchoolScenario(name) {
     // buttons
     {
       dialog:
-        "Narrator: You are at school, sitting next to someone you don't know, five minutes before class starts",
+        "Narrator: You're at school, sitting next to someone you don't know, five minutes before class starts.",
       emote: Emotes.neutral,
       buttons: []
     },
@@ -468,9 +468,9 @@ export function getSchoolScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 2,
+              points: points + 3,
               response: {
-                dialog: "Hi. How's it going?",
+                dialog: "Hi.",
                 emote: Emotes.sad
               }
             });
@@ -484,8 +484,7 @@ export function getSchoolScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
-              gameOver: "Nice try. Try to be more considerate next time.",
+              points: points + 2,
               response: {
                 dialog: "I got here first!",
                 emote: Emotes.sad
@@ -497,7 +496,17 @@ export function getSchoolScenario(name) {
 
         {
           onClick: () => {
-            console.log("Pressed");
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 1,
+              response: {
+                dialog: "Alright, I'll move over... sheesh...",
+                emote: Emotes.sad
+              }
+            });
           },
           text:
             "Get out of my spot! I need my space, perfect air temperature, all that!"
@@ -510,7 +519,7 @@ export function getSchoolScenario(name) {
       buttons: []
     },
     {
-      dialog: "How are you doing today?",
+      dialog: "So... How are you doing today?",
       emote: Emotes.happy,
       buttons: [
         {
@@ -522,14 +531,14 @@ export function getSchoolScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "Ah, nice. And it's Sarah.",
+                dialog: "Ah, nice. And it's Icy.",
                 emote: Emotes.happy
               }
             });
           },
           text:
             "I'm doing pretty good. My name's " +
-            this.props.textWhat +
+            name +
             ", by the way. What's your name?"
         },
         {
@@ -539,16 +548,16 @@ export function getSchoolScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               response: {
-                dialog: "What? Why? It's Sarah.",
+                dialog: "What? Why? I'm Icy.",
                 emote: Emotes.sad
               }
             });
           },
           text:
             "I hate life right now. I'm " +
-            this.props.text +
+            name +
             " Who the heck are you?"
         },
         {
@@ -560,14 +569,14 @@ export function getSchoolScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 4,
               response: {
-                dialog: "My name's Sarah.",
+                dialog: "Glad to hear. My name's Icy.",
                 emote: Emotes.happy
               }
             });
           },
           text:
             "Pretty good. Hey, I'm " +
-            this.props.text +
+            name +
             ". what's your name, by the way?"
         },
         {
@@ -581,7 +590,7 @@ export function getSchoolScenario(name) {
               response: {
                 dialog:
                   "Oh, SAME. I have three essays due tomorrow that I haven't started on. And it's Sarah.",
-                emote: Emotes.happy
+                emote: Emotes.sad
               }
             });
           },
@@ -609,12 +618,13 @@ export function getSchoolScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 3,
               response: {
-                emote: Emotes.happy
+                emote: Emotes.happy,
+                dialog: "Nice to meet you, too."
               }
             });
           },
           text:
-            "Well hey, nice to meet you. Alright, I think I'll have a look over my notes before class."
+            "Well hey, nice to meet you. I think I'll have a look over my notes before class."
         },
         {
           onClick: () => {
@@ -625,11 +635,12 @@ export function getSchoolScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 4,
               response: {
-                emote: Emotes.happy
+                emote: Emotes.happy,
+                dialog: "Sure! I miss class sometimes and it'd be good to have a fallback."
               }
             });
           },
-          text: "Okay, nice to meet you. Hey, can I add you on social media?"
+          text: "It's nice to meet you. Do you want to swap info so we can share notes?"
         },
         {
           onClick: () => {
@@ -640,7 +651,8 @@ export function getSchoolScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                emote: Emotes.happy
+                emote: Emotes.happy,
+                dialog: "See ya!"
               }
             });
           },
@@ -660,7 +672,7 @@ export function getSchoolScenario(name) {
               }
             });
           },
-          text: "You're weird. Alright, talk to you later!"
+          text: "You know, you're pretty weird. Alright, talk to you later!"
         }
       ]
     },
@@ -671,7 +683,7 @@ export function getSchoolScenario(name) {
     },
     {
       dialog:
-        "Narrator: You've had a decent first conversation with her. Now, you have someone who you can talk to again when you see her next!",
+        "Narrator: You've had a decent first conversation with them. Now, you have someone who you can talk to again when you go to class!",
       emote: Emotes.happy,
       buttons: []
     }

@@ -1,51 +1,18 @@
 import React from 'react';
 import { Container, Row, Col, Button, Input } from 'reactstrap';
 import './Game.css';
-import Dialog from '../Dialog';
+import Scenario from '../Scenario';
 import Display from '../Display';
-import Score from '../Score';
-import Buttons from '../Buttons';
-import { Scenario, Emotes, Characters } from '../../helpers/enums';
-import {
-  getGroceryScenario,
-  getSchoolScenario,
-} from '../../helpers/scenarios';
+import { Emotes, Characters } from '../../helpers/enums';
 
 class Game extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      points: 0,
-      response: null,
-      gameOver: null,
-      gameCounter: 0,
-      scenario: null,
       character: "",
-      next: [{ onClick: this.nextSlide, text: "Next" }],
       tempName: "",
     }
-
-    this.getGroceryScenario = getGroceryScenario.bind(this);
-    this.getSchoolScenario = getSchoolScenario.bind(this);
-  }
-
-  componentDidMount() {
-    if (this.props.scenario) {
-      this.setState({
-        ...this.state,
-        scenario: this.getScenario(this.props.scenario)
-      });
-    }
-  }
-
-  nextSlide = () => {
-    const { gameCounter } = this.state;
-    this.setState({
-      ...this.state,
-      response: null,
-      gameCounter: gameCounter+1,
-    })
   }
 
   setCharacter = (character) => {
@@ -53,18 +20,6 @@ class Game extends React.Component {
       ...this.state,
       character
     })
-  }
-
-  getScenario = (scenario) => {
-    switch(scenario) {
-      case Scenario.grocery: {
-        return this.getGroceryScenario(this.props.name);
-      }
-      case Scenario.school: {
-        return this.getSchoolScenario(this.props.name);
-      }
-      default: break;
-    }
   }
 
   setTempName = (event) => {
@@ -80,48 +35,9 @@ class Game extends React.Component {
 
   getGameContent = () => {
     if (this.props.name) {
-      if (this.state.scenario) {
+      if (this.props.scenario) {
         if (this.state.character) {
-          if (this.state.scenario[this.state.gameCounter]) {
-            return (
-              <Row>
-                <Col>
-                  <Row>
-                    <Col className="Score" md={{size: 3, offset: 9}} >
-                      <Score points={this.state.points} />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col>
-                      <Display
-                        key={this.state.character}
-                        className="d-flex justify-content-center Display Img"
-                        character={this.state.character}
-                        emote={this.state.response ? this.state.response.emote : this.state.scenario[this.state.gameCounter].emote}
-                      />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="Dialog">
-                      <Dialog text={this.state.response ? this.state.response.dialog : this.state.scenario[this.state.gameCounter].dialog} />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Buttons buttons={this.state.scenario[this.state.gameCounter].buttons.length === 0 ? this.state.next : this.state.scenario[this.state.gameCounter].buttons} />
-                  </Row>
-                </Col>
-              </Row>
-            );
-          } else {
-            return (
-              <Row>
-                <Col>
-                  <h1>Scenario Complete!</h1>
-                  <p>Your final score was <b>{this.state.points}</b>.</p>
-                </Col>
-              </Row>
-            );
-          }
+          return <Scenario name={this.props.name} character={this.state.character} scenario={this.props.scenario} />;
         } else {
           return (
             <React.Fragment>
