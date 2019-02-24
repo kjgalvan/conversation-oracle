@@ -84,7 +84,7 @@ body{
     height: 50%;
 }
 
-.DoubleDisplay {
+.DoubleDisplay.row {
     margin-top: 2vh;
     border-left-style: double;
     border-left-color: white;
@@ -136,20 +136,21 @@ body{
     background-color: #FEEAFA;
     min-width: .3vh;
     min-height: .3vh;
-    width: 99vh;
+    width: 100%;
 }
 
 .Dialog.solo{
     margin: 2vh;
     padding-bottom: 2vh;
-    width: 80vh;
+    width: 100%;
 }
 
 .Dialog * p{
     margin-top: 1.2vh;
 }
 
-.Submit{
+.Submit.ButtonOverride{
+    height: auto;
     margin-top: 1.2vh;
     margin-left: 1.2vh;
     margin-right: 1.2vh;
@@ -170,10 +171,10 @@ body{
 }
 
 .ButtonOverride{
-    color: #394051;
-    border: 2px solid;
-    background-color: #CBC0D3;
-    border-color: #948C9A;
+    height: 100%;
+    color: #26292f;
+    background-color: #A1AFA0;
+    border-color: #798478;
 }
 
 .ButtonOverride:hover{
@@ -181,4 +182,23 @@ body{
     border: 2px solid;
     background-color: #948C9A;
     border-color: #948C9A;
+}
+
+.row {
+    width: 100%;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0;
+        padding-bottom: 2vh;
+    }
+    .col {
+        padding: .5vh;
+    }
+    .Dialog {
+        padding: 1vh;
+        border-radius: 1.5vh;
+    }
 }

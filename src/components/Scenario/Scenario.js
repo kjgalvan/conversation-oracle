@@ -136,13 +136,15 @@ class Game extends React.Component {
         );
       } else {
         return (
-          <Row>
-            <Col className="Buttons">
-              <Row>
-                <h1>Scenario Complete!</h1>
-              </Row>
-              <Row>
-                <p>
+          <React.Fragment>
+            <Row style={{ width: "100%", marginTop: "2vh" }}>
+              <Col>
+                <h1 align="center">Scenario Complete!</h1>
+              </Col>
+            </Row>
+            <Row style={{ width: "100%" }}>
+              <Col>
+                <p align="center">
                   Your final score was{" "}
                   <b>
                     {Number.parseFloat(
@@ -152,9 +154,9 @@ class Game extends React.Component {
                   </b>
                   .
                 </p>
-              </Row>
-            </Col>
-          </Row>
+              </Col>
+            </Row>
+          </React.Fragment>
         );
       }
     } else {
