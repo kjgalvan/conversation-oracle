@@ -1,8 +1,58 @@
-.Nav{
-    font-family: Impact, serif;
-    margin:auto;
-    border: solid 2px;
-    border-color: red;
+.logo{
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.5vh;
+    color: #336699;
     min-width: .3vh;
     min-height: .3vh;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    /*
+    border-left-style: double;
+    border-left-width: 4px;
+    border-left-color: #336699;
+    border-bottom-style: double;
+    border-bottom-width: 4px;
+    border-bottom-color: #336699;
+    border-bottom-left-radius: 4vh;
+    */
+}
+div.conversation{
+    padding-left: .2vh;
+    padding-right: 2.2vh;
+    color: #336699;
+    border-bottom-style: dotted;
+    border-bottom-width: 4px;
+    border-bottom-color: #336699;
+}
+
+div.oracle{
+    padding-left: .2vh;
+    padding-right: 2.2vh;
+    color: #336699;
+    border-bottom-style: dotted;
+    border-bottom-width: 4px;
+    border-bottom-color: #336699;
+}
+
+div.letterC{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', serif;
+    color: #6699cc;
+    padding-left: 2.2vh;
+    padding-right: 2.2vh;
+    font-size: 5vh;
+    border: 4px double;
+    border-radius: 5vh;
+}
+div.letterO{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', serif;
+    color:#6699cc;
+    padding-left: 2.2vh;
+    padding-right: 2.2vh;
+    font-size: 5vh;
+    border: 4px double;
+    border-radius: 5vh;
 }

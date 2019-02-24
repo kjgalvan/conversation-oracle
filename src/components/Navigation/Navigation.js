@@ -15,7 +15,7 @@ class Navigation extends React.Component {
   render() {
     return (
       <Navbar className= "Nav">
-        <NavbarBrand>Conversation Oracle</NavbarBrand>
+        <NavbarBrand className= "logo"><div className= "letterC">C</div><div className ="conversation">onversation </div><div className="letterO"> O</div><div className="oracle">racle</div></NavbarBrand>
         <Nav>
           <UncontrolledDropdown nav inNavbar>
           <DropdownToggle nav caret>
