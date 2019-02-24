@@ -1,4 +1,4 @@
-export const Scenario = {
+export const Scenarios = {
   grocery: "GROCERY",
   school: "SCHOOL",
   park: "PARK",

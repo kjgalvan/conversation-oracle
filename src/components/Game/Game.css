@@ -153,3 +153,7 @@ body{
     justify-content: center;
     display: flex;
 }
+
+.Horizontal {
+    margin: 1vh 0;
+}
