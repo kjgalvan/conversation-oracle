@@ -71,7 +71,7 @@ class Game extends React.Component {
             <Container className="Game">
               <Row>
                 <Col className="Score" md={{size: 3, offset: 9}} >
-                  <Score points="97" />
+                  <Score points={this.state.points} />
                 </Col>
               </Row>
               <Row>
