@@ -153,6 +153,10 @@ body{
     display: flex;
 }
 
+.Horizontal {
+    margin: 1vh 0;
+}
+
 .ButtonOverride{
     color: #26292f;
     background-color: #798478;

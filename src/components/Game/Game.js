@@ -82,10 +82,10 @@ class Game extends React.Component {
               </Row>
               <Row style={{ width: "100%" }}>
                 <Col className="Buttons">
-                  <Button autoFocus onClick={() => { this.setCharacter(Characters.nana); }}>Nana</Button>
+                  <Button className="ButtonOverride" autoFocus onClick={() => { this.setCharacter(Characters.nana); }}>Nana</Button>
                 </Col>
                 <Col className="Buttons">
-                  <Button onClick={() => { this.setCharacter(Characters.popo); }}>Popo</Button>
+                  <Button className="ButtonOverride" onClick={() => { this.setCharacter(Characters.popo); }}>Popo</Button>
                 </Col>
               </Row>
             </React.Fragment>
@@ -96,7 +96,7 @@ class Game extends React.Component {
           <Row>
             <Col className="Dialog solo">
               <Dialog text={`Hi, ${this.props.name}! Please pick a scenario.`} />
-              <Buttons className="Horizontal" buttons={this.state.scenarios} />
+              <Buttons className="ButtonOverride Horizontal" buttons={this.state.scenarios} />
             </Col>
           </Row>
         );
@@ -107,7 +107,7 @@ class Game extends React.Component {
           <Col className="Dialog solo">
             <Dialog text="My name is..." />
             <input autoFocus className="form-control" onBlur={this.setTempName} onKeyPress={this.onKeyPress} />
-            <Button className="Submit" onClick={this.onSubmit}>Submit</Button>
+            <Button className="ButtonOverride Submit" onClick={this.onSubmit}>Submit</Button>
           </Col>
         </Row>
       );
