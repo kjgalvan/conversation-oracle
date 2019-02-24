@@ -122,6 +122,7 @@ class Game extends React.Component {
               </Row>
               <Row>
                 <Buttons
+                  className="ButtonOverride"
                   buttons={
                     this.state.scenario[this.state.gameCounter].buttons
                       .length === 0
