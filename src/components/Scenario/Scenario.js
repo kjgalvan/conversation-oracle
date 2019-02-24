@@ -8,7 +8,9 @@ import { Scenarios } from '../../helpers/enums';
 import {
   getGroceryScenario,
   getSchoolScenario,
-} from '../../helpers/scenarios';
+  getParkScenario,
+  getMarketScenario
+} from "../../helpers/scenarios";
 
 class Game extends React.Component {
   constructor(props) {
@@ -21,11 +23,13 @@ class Game extends React.Component {
       gameOver: null,
       gameCounter: 0,
       scenario: null,
-      next: [{ onClick: this.nextSlide, text: "Next" }],
-    }
+      next: [{ onClick: this.nextSlide, text: "Next" }]
+    };
 
     this.getGroceryScenario = getGroceryScenario.bind(this);
     this.getSchoolScenario = getSchoolScenario.bind(this);
+    this.getMarketScenario = getMarketScenario.bind(this);
+    this.getParkScenario = getParkScenario.bind(this);
   }
 
   componentDidMount() {
@@ -45,27 +49,40 @@ class Game extends React.Component {
       ...this.state,
       response: null,
       gameOver: null,
-      gameCounter: gameCounter+1,
-    })
-  }
+      gameCounter: gameCounter + 1
+    });
+  };
 
   getScenario = (scenario) => {
     switch(scenario) {
       case Scenarios.grocery: {
         return {
           array: this.getGroceryScenario(this.props.name, this.props.character),
-          total: 20,
+          total: 20
         };
       }
       case Scenarios.school: {
         return {
           array: this.getSchoolScenario(this.props.name, this.props.character),
-          total: 20,
-        }
+          total: 20
+        };
       }
-      default: break;
+      case Scenarios.park: {
+        return {
+          array: this.getParkScenario(this.props.name, this.props.character),
+          total: 20
+        };
+      }
+      case Scenarios.market: {
+        return {
+          array: this.getMarketScenario(this.props.name, this.props.character),
+          total: 12
+        };
+      }
+      default:
+        break;
     }
-  }
+  };
 
   render() {
     if (this.state.scenario) {
@@ -74,7 +91,7 @@ class Game extends React.Component {
           <Row>
             <Col>
               <Row>
-                <Col className="Score" md={{size: 3, offset: 9}} >
+                <Col className="Score" md={{ size: 3, offset: 9 }}>
                   <Score points={this.state.points} />
                 </Col>
               </Row>
@@ -84,17 +101,34 @@ class Game extends React.Component {
                     key={this.props.character}
                     className="d-flex justify-content-center Display Img"
                     character={this.props.character}
-                    emote={this.state.response ? this.state.response.emote : this.state.scenario[this.state.gameCounter].emote}
+                    emote={
+                      this.state.response
+                        ? this.state.response.emote
+                        : this.state.scenario[this.state.gameCounter].emote
+                    }
                   />
                 </Col>
               </Row>
               <Row>
                 <Col className="Dialog">
-                  <Dialog text={this.state.response ? this.state.response.dialog : this.state.scenario[this.state.gameCounter].dialog} />
+                  <Dialog
+                    text={
+                      this.state.response
+                        ? this.state.response.dialog
+                        : this.state.scenario[this.state.gameCounter].dialog
+                    }
+                  />
                 </Col>
               </Row>
               <Row>
-                <Buttons buttons={this.state.scenario[this.state.gameCounter].buttons.length === 0 ? this.state.next : this.state.scenario[this.state.gameCounter].buttons} />
+                <Buttons
+                  buttons={
+                    this.state.scenario[this.state.gameCounter].buttons
+                      .length === 0
+                      ? this.state.next
+                      : this.state.scenario[this.state.gameCounter].buttons
+                  }
+                />
               </Row>
             </Col>
           </Row>

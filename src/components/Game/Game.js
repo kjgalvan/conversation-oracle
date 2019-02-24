@@ -20,16 +20,16 @@ class Game extends React.Component {
           onClick: () => { this.props.setScenario(Scenarios.grocery) }
         },
         {
-          text: 'Grocery Store',
-          onClick: () => { this.props.setScenario(Scenarios.grocery) }
+          text: 'School',
+          onClick: () => { this.props.setScenario(Scenarios.school) }
         },
         {
-          text: 'Grocery Store',
-          onClick: () => { this.props.setScenario(Scenarios.grocery) }
+          text: 'Market',
+          onClick: () => { this.props.setScenario(Scenarios.market) }
         },
         {
-          text: 'Grocery Store',
-          onClick: () => { this.props.setScenario(Scenarios.grocery) }
+          text: 'Park',
+          onClick: () => { this.props.setScenario(Scenarios.park) }
         },
       ]
     }
@@ -90,7 +90,7 @@ class Game extends React.Component {
           <Row>
             <Col className="Dialog solo">
               <Dialog text={`Hi, ${this.props.name}! Please pick a scenario.`} />
-              <Buttons />
+              <Buttons className="Horizontal" buttons={this.state.scenarios} />
             </Col>
           </Row>
         );

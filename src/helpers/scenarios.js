@@ -121,7 +121,7 @@ export function getGroceryScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 1,
+              points: points + 3,
               response: {
                 dialog:
                   "I work at the local animal shelter, but my hear breaks every time we have put down one....",
@@ -501,9 +501,9 @@ export function getSchoolScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 2,
+              points: points + 1,
               response: {
-                dialog: "I got here first!",
+                dialog: "...",
                 emote: Emotes.sad
               }
             });
@@ -572,10 +572,7 @@ export function getSchoolScenario(name) {
               }
             });
           },
-          text:
-            "I hate life right now. I'm " +
-            name +
-            " Who the heck are you?"
+          text: "I hate life right now. I'm " + name + " Who the heck are you?"
         },
         {
           onClick: () => {
@@ -592,9 +589,7 @@ export function getSchoolScenario(name) {
             });
           },
           text:
-            "Pretty good. Hey, I'm " +
-            name +
-            ". what's your name, by the way?"
+            "Pretty good. Hey, I'm " + name + ". what's your name, by the way?"
         },
         {
           onClick: () => {
@@ -653,11 +648,13 @@ export function getSchoolScenario(name) {
               points: points + 4,
               response: {
                 emote: Emotes.happy,
-                dialog: "Sure! I miss class sometimes and it'd be good to have a fallback."
+                dialog:
+                  "Sure! I miss class sometimes and it'd be good to have a fallback."
               }
             });
           },
-          text: "It's nice to meet you. Do you want to swap info so we can share notes?"
+          text:
+            "It's nice to meet you. Do you want to swap info so we can share notes?"
         },
         {
           onClick: () => {
@@ -682,9 +679,10 @@ export function getSchoolScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               gameOver: "That was rude. Try manners next time.",
               response: {
+                dialog: "...",
                 emote: Emotes.sad
               }
             });
@@ -746,7 +744,7 @@ export function getParkScenario(name) {
               points: points + 1,
               response: {
                 dialog: "Umm, all's good in the hood, BRO.",
-                emote: Emotes.neutral
+                emote: Emotes.sad
               }
             });
           },
@@ -759,7 +757,7 @@ export function getParkScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 2,
               response: {
                 dialog: "(mockingly) Very well, my good sir.",
                 emote: Emotes.neutral
@@ -775,7 +773,7 @@ export function getParkScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               gameOver: "That was not nice. You just lost your job.",
               response: {
                 dialog: "YOU'RE FIRED!!!",
@@ -805,6 +803,7 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               response: {
+                dialog: "...",
                 emote: Emotes.sad
               }
             });
@@ -820,6 +819,7 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 4,
               response: {
+                dialog: "...",
                 emote: Emotes.sad
               }
             });
@@ -833,8 +833,9 @@ export function getParkScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               response: {
+                dialog: "...",
                 emote: Emotes.sad
               }
             });
@@ -848,8 +849,9 @@ export function getParkScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 0,
-              points: points + 1,
+              points: points + 2,
               response: {
+                dialog: "...",
                 emote: Emotes.neutral
               }
             });
@@ -879,7 +881,7 @@ export function getParkScenario(name) {
               response: {
                 dialog:
                   "Great! Just remember, it's due Tuesday, so allow plenty of time.",
-                emote: Emotes.happy
+                emote: Emotes.neutral
               }
             });
           },
@@ -892,7 +894,7 @@ export function getParkScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               response: {
                 dialog:
                   "Kid, you'd better clean up your game right now, or next time, you're fired.",
@@ -909,7 +911,7 @@ export function getParkScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               response: {
                 dialog: "Okay, looks like someone needs to get to work, then!",
                 emote: Emotes.neutral
@@ -925,10 +927,10 @@ export function getParkScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               response: {
                 dialog: "Kid, clean your game up RIGHT NOW!!!",
-                emote: Emotes.neutral
+                emote: Emotes.sad
               }
             });
           },
@@ -955,6 +957,7 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 3,
               response: {
+                dialog: "...",
                 emote: Emotes.neutral
               }
             });
@@ -968,8 +971,9 @@ export function getParkScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               response: {
+                dialog: "...",
                 emote: Emotes.neutral
               }
             });
@@ -985,7 +989,8 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 4,
               response: {
-                emote: Emotes.neutral
+                dialog: "...",
+                emote: Emotes.happy
               }
             });
           },
@@ -999,10 +1004,11 @@ export function getParkScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               gameOver:
                 "He might take that personally. That was not a good idea!",
               response: {
+                dialog: "...",
                 emote: Emotes.sad
               }
             });
@@ -1050,7 +1056,7 @@ export function getMarketScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               response: {
                 dialog: "Excuse me, youngin'!!! THIS IS BETWEEN ME AND HER!!!",
                 emote: Emotes.sad
@@ -1087,6 +1093,7 @@ export function getMarketScenario(name) {
               gameOver:
                 "Okay, you avoided the situation. That's decent from your perspective, but not helpful to the community.",
               response: {
+                dialog: "...",
                 emote: Emotes.sad
               }
             });
@@ -1147,7 +1154,7 @@ export function getMarketScenario(name) {
               points: points + 4,
               response: {
                 dialog:
-                  "AHH, you’re right. Well, forget about her. I’ll find someplace else!",
+                  "Thank you, sweetie. I think I’m overreacting right now.",
                 emote: Emotes.neutral
               }
             });
@@ -1161,7 +1168,7 @@ export function getMarketScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               response: {
                 dialog:
                   "NO, because of HER CHOICE, these prices are abhorrent.",
@@ -1190,8 +1197,9 @@ export function getMarketScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 1,
+              points: points + 2,
               response: {
+                dialog: "...",
                 emote: Emotes.sad
               }
             });
@@ -1205,10 +1213,11 @@ export function getMarketScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               gameOver:
                 "GAME OVER, MAN! GAME OVER!!! Why did you do that? The situation was calming down, but what you said made it worse than ever? Next time, be more sensitive.",
               response: {
+                dialog: "...",
                 emote: Emotes.sad
               }
             });
@@ -1224,6 +1233,7 @@ export function getMarketScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 3,
               response: {
+                dialog: "...",
                 emote: Emotes.neutral
               }
             });
@@ -1238,11 +1248,11 @@ export function getMarketScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 4,
               response: {
                 dialog:
                   "Thank you, sweetie! I think that I let things get out of hand.",
-                emote: Emotes.sad
+                emote: Emotes.happy
               }
             });
           },
