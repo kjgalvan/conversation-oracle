@@ -1,3 +1,9 @@
+body{
+    height: 100%;
+    margin: 0 0 0 0;
+    background-image: linear-gradient(to top, #7a93a5 0%, #bed3dd 100%);
+}
+
 
 .Score{
     /*border: solid 2px;
@@ -15,7 +21,7 @@
     margin:auto;
     border: solid 2px;
     border-color:  #336699;
-    border-radius: 5vh 5vh 2vh 2vh;
+    border-radius: 5vh 5vh 5vh 5vh;
     background-color:  #6699cc;
     min-width: .3vh;
     min-height: .3vh;
@@ -49,7 +55,6 @@
    
     border-radius: 5vh 5vh 0vh 0vh;
     background-color: white;
-    
 
 
     /* Removes the color behind the border */
@@ -75,6 +80,7 @@
 }
 
 .DoubleDisplay {
+    margin-top: 2vh;
     border-left-style: double;
     border-left-color: white;
     border-left-width: 15px;
@@ -122,9 +128,20 @@
     background-color: white;
     min-width: .3vh;
     min-height: .3vh;
+    width: 100vh;
 }
+
+.Dialog.solo{
+    margin: 2vh;
+    width: 80vh;
+}
+
+.Dialog * p{
+    margin-top: 1.2vh;
+}
+
 .Submit{
-    margin-top: 5px;
+    margin: 1.2vh;
     float: right;
 }
 

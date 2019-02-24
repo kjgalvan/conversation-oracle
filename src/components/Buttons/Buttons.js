@@ -3,9 +3,9 @@ import { Col, Button } from 'reactstrap';
 
 class Buttons extends React.Component {
   render() {
-    const mappedButtons = this.props.buttons.map(buttonObject => (
+    const mappedButtons = this.props.buttons.map((buttonObject, index) => (
       <Col key={buttonObject.text}>
-        <Button style={{ width: "100%" }} key={buttonObject.text} onClick={buttonObject.onClick}>{buttonObject.text}</Button>
+        <Button autoFocus={(index === 0) ? true : false} style={{ width: "100%" }} key={buttonObject.text} onClick={buttonObject.onClick}>{buttonObject.text}</Button>
       </Col>
     ));
 

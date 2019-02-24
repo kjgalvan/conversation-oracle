@@ -44,7 +44,7 @@ div.letterC{
     padding-left: 2.2vh;
     padding-right: 2.2vh;
     font-size: 5vh;
-    border: 4px double;
+    border: 4px double #FFF5D9;
     border-radius: 5vh;
 }
 div.letterO{
@@ -53,6 +53,6 @@ div.letterO{
     padding-left: 2.2vh;
     padding-right: 2.2vh;
     font-size: 5vh;
-    border: 4px double;
+    border: 4px double #FFF5D9;
     border-radius: 5vh;
 }
