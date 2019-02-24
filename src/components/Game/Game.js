@@ -76,13 +76,13 @@ class Game extends React.Component {
     this.props.setName(this.state.tempName);
   }
 
-  render() {
+  getGameContent = () => {
     if (this.props.name) {
-      if (this.state.character) {
-        if (this.state.scenario) {
+      if (this.state.scenario) {
+        if (this.state.character) {
           if (this.state.scenario[this.state.gameCounter]) {
             return (
-              <Container className="Game">
+              <React.Fragment>
                 <Row>
                   <Col className="Score" md={{size: 3, offset: 9}} >
                     <Score points={this.state.points} />
@@ -101,38 +101,43 @@ class Game extends React.Component {
                 <Row>
                   <Buttons buttons={this.state.next} />
                 </Row>
-              </Container>
+              </React.Fragment>
             );
           } else {
-            return <h1>Scenario Complete!</h1>
+            return (
+              <React.Fragment>
+                <h1>Scenario Complete!</h1>
+                <p>Your final score was </p><b>{this.state.points}</b>
+              </React.Fragment>
+            );
           }
-        } else { return <p>Error... Not quite sure how you got here...</p> }
-      } else {
-        return (
-          <Container className="Game">
-            <Row><Col><p>I want to talk to...</p></Col></Row>
-            <Row>
-              <Col>
-                <Display character={Characters.nana} emote={Emotes.happy} />
-              </Col>
-              <Col>
-                <Display character={Characters.popo} emote={Emotes.happy} />
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <Button onClick={() => { this.setCharacter(Characters.nana); }}>Nana</Button>
-              </Col>
-              <Col>
-                <Button onClick={() => { this.setCharacter(Characters.popo); }}>Popo</Button>
-              </Col>
-            </Row>
-          </Container>
-        );
-      }
+        } else {
+          return (
+            <React.Fragment>
+              <p>I want to talk to...</p>
+              <Row>
+                <Col>
+                  <Display character={Characters.nana} emote={Emotes.happy} />
+                </Col>
+                <Col>
+                  <Display character={Characters.popo} emote={Emotes.happy} />
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Button onClick={() => { this.setCharacter(Characters.nana); }}>Nana</Button>
+                </Col>
+                <Col>
+                  <Button onClick={() => { this.setCharacter(Characters.popo); }}>Popo</Button>
+                </Col>
+              </Row>
+            </React.Fragment>
+          );
+        }
+      } else { return <p>Hi, {this.props.name}! Please pick a scenario.</p> } 
     } else {
       return (
-        <Container>
+        <React.Fragment>
           <Row>
             <Col>My name is...
               <Input onBlur={this.setTempName} />
@@ -143,9 +148,22 @@ class Game extends React.Component {
               <Button className="Submit" onClick={this.onSubmit}>Submit</Button>
             </Col>
           </Row>
-        </Container>
+        </React.Fragment>
       );
     }
+  }
+
+  render() {
+    const gameContent = this.getGameContent();
+    return (
+      <Container className="Game">
+        <Row>
+          <Col>
+            {gameContent}
+          </Col>
+        </Row>
+      </Container>
+    );
   }
 }
 

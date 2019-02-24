@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navigation onClick={this.setScenario} />
-        <Game key={this.state.scenario} name={this.state.name} scenario={this.state.scenario} setName={this.setName} />
+        <Game key={this.state.gameId} name={this.state.name} scenario={this.state.scenario} setName={this.setName} />
       </React.Fragment>
     );
   }
