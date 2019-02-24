@@ -1,8 +1,7 @@
 import { Emotes } from "./enums";
 
 export function getGroceryScenario(name, character) {
-  var scenario = [
-    // buttons
+  const scenario = [
     {
       dialog:
         `You're at the local grocery store when you spot an old acquaintance, ${character}.`,
@@ -145,7 +144,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "Your folks are lucky. "
+          text: "Your folks are lucky."
         },
         {
           onClick: () => {
@@ -207,7 +206,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "Ah Mountain Dew, I see you’re quite cultured. "
+          text: "Ah Mountain Dew, I see you’re quite cultured."
         },
         {
           onClick: () => {
@@ -224,7 +223,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "Oh, I love that cereal! "
+          text: "Oh, I love that cereal!"
         },
         {
           onClick: () => {
@@ -267,7 +266,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "Oh you know, just busy with school and work. "
+          text: "Oh you know, just busy with school and work."
         },
         {
           onClick: () => {
@@ -283,7 +282,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "I’m doing alright, you know chilling. "
+          text: "I’m doing alright, you know chilling."
         },
         {
           onClick: () => {
@@ -300,7 +299,7 @@ export function getGroceryScenario(name, character) {
             });
           },
           text:
-            "Bad. I feel like my girlfriend doesn’t love me anymore. I’ve just been so lonely. "
+            "Bad. I feel like my girlfriend doesn’t love me anymore. I’ve just been so lonely."
         },
         {
           onClick: () => {
@@ -318,7 +317,7 @@ export function getGroceryScenario(name, character) {
             });
           },
           text:
-            "I’ve been going to law school a while now. I also work at Bell Taco, so I’ve been busy! "
+            "I’ve been going to law school a while now. I also work at Bell Taco, so I’ve been busy!"
         }
       ]
     },
@@ -451,8 +450,8 @@ export function getGroceryScenario(name, character) {
   return scenario;
 }
 
-export function getSchoolScenario(name) {
-  var scenario = [
+export function getSchoolScenario(name, character) {
+  const scenario = [
     // buttons
     {
       dialog:
@@ -709,11 +708,13 @@ export function getSchoolScenario(name) {
   return scenario;
 }
 
-export function getParkScenario(name) {
-  var scenario = [
+export function getParkScenario(name, character) {
+  const shePronoun = character === "Nana" ? "she" : "he";
+  const herPronoun = character === "Nana" ? "her" : "him";
+  const scenario = [
     {
       dialog:
-        "Narrator: You meet your new boss, Mr. Hoss, at the park by chance. You are walking opposite ways and they appears as though they wants to speak with you. How do you greet him?",
+        `Narrator: You've ran into your new boss, ${character} at the park. You are walking opposite ways and ${shePronoun} appears as though ${shePronoun} wants to speak to you. How do you greet ${herPronoun}?`,
       emote: Emotes.neutral,
       buttons: []
     },
@@ -1025,8 +1026,8 @@ export function getParkScenario(name) {
   return scenario;
 }
 
-export function getMarketScenario(name) {
-  var scenario = [
+export function getMarketScenario() {
+  const scenario = [
     {
       dialog:
         "Narrator: You are at the flea market when you see an old person yelling at the shopkeeper.",
@@ -1051,7 +1052,7 @@ export function getMarketScenario(name) {
               }
             });
           },
-          text: "It’s the shopkeeper’s decision. "
+          text: "It’s the shopkeeper’s decision."
         },
         {
           onClick: () => {
@@ -1130,7 +1131,7 @@ export function getMarketScenario(name) {
             });
           },
           text:
-            "I know that things like this can be upsetting, but it’s not always a salespersons choice when prices change."
+            "I know that things like this can be upsetting, but it’s not always a salesperson's choice when prices change."
         },
         {
           onClick: () => {
@@ -1158,7 +1159,7 @@ export function getMarketScenario(name) {
               points: points + 4,
               response: {
                 dialog:
-                  "Thank you, sweetie. I think I’m overreacting right now.",
+                  "Thank you for understanding.",
                 emote: Emotes.neutral
               }
             });
@@ -1175,12 +1176,12 @@ export function getMarketScenario(name) {
               points: points + 1,
               response: {
                 dialog:
-                  "NO, because of HER CHOICE, these prices are abhorrent.",
+                  "Yeah well, now these prices are abhorrent!",
                 emote: Emotes.sad
               }
             });
           },
-          text: "SHUT IT!!! IT’S HER CHOICE"
+          text: "SHUT IT!!! It’s HER choice"
         }
       ]
     },
@@ -1191,7 +1192,7 @@ export function getMarketScenario(name) {
     },
     {
       dialog:
-        "Narrator: Okay, looks like she's calming down. Now, you can finish diffusing this.",
+        "Narrator: Okay, looks like she's calming down. Now, you can finish diffusing this situation.",
       emote: Emotes.neutral,
       buttons: [
         {
@@ -1203,7 +1204,7 @@ export function getMarketScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "Bye!",
+                dialog: "We'll see.",
                 emote: Emotes.sad
               }
             });
@@ -1219,10 +1220,10 @@ export function getMarketScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               gameOver:
-                "Why did you do that? The situation was calming down, but what you said made it worse than ever? Next time, be more sensitive.",
+                "Would you stop yelling at people? The situation was calming down, but what you said made it worse than ever. Next time, be more sensitive!",
               response: {
-                dialog: "WELL EXCUSE ME!",
-                emote: Emotes.sad
+                dialog: "",
+                emote: Emotes.neutral
               }
             });
           },
@@ -1237,13 +1238,13 @@ export function getMarketScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 3,
               response: {
-                dialog: "Great... Bye!",
+                dialog: "Don't be silly, I'm on my way too!",
                 emote: Emotes.neutral
               }
             });
           },
           text:
-            "Okay, well I’m going to leave. Hopefully, I’ve helped to diffuse this."
+            "Okay, well I’m going to leave. Hopefully, y'all can play nice."
         },
         {
           onClick: () => {
@@ -1255,7 +1256,7 @@ export function getMarketScenario(name) {
               points: points + 4,
               response: {
                 dialog:
-                  "Thank you, sweetie! I think that I let things get out of hand.",
+                  "Thank you. I think I let things get out of hand...",
                 emote: Emotes.happy
               }
             });
@@ -1271,12 +1272,12 @@ export function getMarketScenario(name) {
     },
     {
       dialog:
-        "Okay sweetie, I think that you've helped me to get things in check. Thank you!",
+        "I'll just take my business elsewhere. Sorry if I was rude.",
       emote: Emotes.happy,
       buttons: []
     },
     {
-      dialog: "Narrator: Good job! You helped to diffuse the situation!",
+      dialog: "Narrator: Good job! You've helped diffuse the situation, I hope!",
       emote: Emotes.happy,
       buttons: []
     }
