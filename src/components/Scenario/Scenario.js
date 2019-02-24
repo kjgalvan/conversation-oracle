@@ -1,10 +1,10 @@
-import React from 'react';
-import { Row, Col } from 'reactstrap';
-import Dialog from '../Dialog';
-import Display from '../Display';
-import Score from '../Score';
-import Buttons from '../Buttons';
-import { Scenarios } from '../../helpers/enums';
+import React from "react";
+import { Row, Col } from "reactstrap";
+import Dialog from "../Dialog";
+import Display from "../Display";
+import Score from "../Score";
+import Buttons from "../Buttons";
+import { Scenarios } from "../../helpers/enums";
 import {
   getGroceryScenario,
   getSchoolScenario,
@@ -53,8 +53,8 @@ class Game extends React.Component {
     });
   };
 
-  getScenario = (scenario) => {
-    switch(scenario) {
+  getScenario = scenario => {
+    switch (scenario) {
       case Scenarios.grocery: {
         return {
           array: this.getGroceryScenario(this.props.name, this.props.character),
@@ -64,13 +64,13 @@ class Game extends React.Component {
       case Scenarios.school: {
         return {
           array: this.getSchoolScenario(this.props.name, this.props.character),
-          total: 20
+          total: 12
         };
       }
       case Scenarios.park: {
         return {
           array: this.getParkScenario(this.props.name, this.props.character),
-          total: 20
+          total: 16
         };
       }
       case Scenarios.market: {
