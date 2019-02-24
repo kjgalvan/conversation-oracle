@@ -57,7 +57,7 @@ class Game extends React.Component {
               </Row>
               <Row style={{ width: "100%" }}>
                 <Col className="Buttons">
-                  <Button onClick={() => { this.setCharacter(Characters.nana); }}>Nana</Button>
+                  <Button autoFocus onClick={() => { this.setCharacter(Characters.nana); }}>Nana</Button>
                 </Col>
                 <Col className="Buttons">
                   <Button onClick={() => { this.setCharacter(Characters.popo); }}>Popo</Button>

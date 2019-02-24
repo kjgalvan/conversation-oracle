@@ -80,6 +80,7 @@ body{
 }
 
 .DoubleDisplay {
+    margin-top: 2vh;
     border-left-style: double;
     border-left-color: white;
     border-left-width: 15px;
@@ -131,12 +132,16 @@ body{
 }
 
 .Dialog.solo{
-    margin: 15px;
+    margin: 2vh;
     width: 80vh;
 }
 
+.Dialog * p{
+    margin-top: 1.2vh;
+}
+
 .Submit{
-    margin: 7px;
+    margin: 1.2vh;
     float: right;
 }
 
