@@ -318,7 +318,7 @@ export function getGroceryScenario(name) {
             });
           },
           text:
-            "Hmm, well I’ve been going to college to become a lawyer for a while now. I also work at Bell Taco on campus there, so I’ve been pretty busy! "
+            "I’ve been going to law school a while now. I also work at Bell Taco, so I’ve been busy! "
         }
       ]
     },
@@ -1129,7 +1129,7 @@ export function getMarketScenario(name) {
             });
           },
           text:
-            "I know that things like this can be upsetting, but it’s not her responsibility to not raise her prices."
+            "I know that things like this can be upsetting, but it’s not always a salespersons choice when prices change."
         },
         {
           onClick: () => {
@@ -1218,7 +1218,7 @@ export function getMarketScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               gameOver:
-                "GAME OVER, MAN! GAME OVER!!! Why did you do that? The situation was calming down, but what you said made it worse than ever? Next time, be more sensitive.",
+                "Why did you do that? The situation was calming down, but what you said made it worse than ever? Next time, be more sensitive.",
               response: {
                 dialog: "WELL EXCUSE ME!",
                 emote: Emotes.sad
