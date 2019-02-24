@@ -94,7 +94,7 @@ export function getGroceryScenario(name, character) {
       buttons: []
     },
     {
-      dialog: "So, I've been trying to move of my parents house. It's hard since I've been busy with work.",
+      dialog: "So, I've been trying to move out of my parents house. It's hard since I've been busy with work.",
       emote: Emotes.happy,
       buttons: [
         {
@@ -123,7 +123,7 @@ export function getGroceryScenario(name, character) {
               points: points + 3,
               response: {
                 dialog:
-                  "I work at the local animal shelter, It's great knowing I'm making a difference!",
+                  "I work at the local animal shelter. It's great knowing I'm making a difference!",
                 emote: Emotes.happy
               }
             });
@@ -218,7 +218,7 @@ export function getGroceryScenario(name, character) {
               points: points + 4,
               response: {
                 dialog:
-                  "You love Berry Berry Oats too? It’s the best cereal on the market!",
+                  "You love Berry Berry Oats, too? It’s the best cereal on the market!",
                 emote: Emotes.happy
               }
             });
@@ -435,13 +435,13 @@ export function getGroceryScenario(name, character) {
     },
     {
       dialog:
-        "Remember conversations are supposed to opportunities to connect to other people.",
+        "Remember, conversations are supposed to opportunities to connect to other people.",
       emote: Emotes.neutral,
       buttons: []
     },
     {
       dialog:
-        "When you don’t contribute or avoid the conversation, you miss out on this valuable part of life.",
+        "When you don’t contribute to conversations or avoid them altogether, you miss out on this valuable part of life.",
       emote: Emotes.neutral,
       buttons: []
     }
@@ -555,7 +555,7 @@ export function getSchoolScenario(name, character) {
             });
           },
           text:
-            `I'm doing pretty good. My name's ${name}, by the way. What's your name?`
+            `I'm having a great day! My name's ${name}, by the way. What's your name?`
         },
         {
           onClick: () => {
@@ -566,7 +566,7 @@ export function getSchoolScenario(name, character) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               response: {
-                dialog: `What?? Why? Also, my name is ${character}.`,
+                dialog: `What? Why? Also, my name is ${character}.`,
                 emote: Emotes.sad
               }
             });
@@ -733,7 +733,6 @@ export function getMarketScenario(name, character) {
           },
           text: "SHUT UP! Stop your whining!"
         },
-
         {
           onClick: () => {
             const { gameCounter } = this.state;
@@ -776,6 +775,7 @@ export function getMarketScenario(name, character) {
       buttons: []
     },
     {
+      dialog: "I'm sick and tired of being nickle and dimed everywhere I go.",
       emote: Emotes.sad,
       buttons: [
         {
@@ -794,7 +794,7 @@ export function getMarketScenario(name, character) {
             });
           },
           text:
-            "I know that things like this can be upsetting, but it’s not always a salesperson's choice when prices change."
+            "I know that things like this can be upsetting, but it’s not always the salesperson's choice when the price changes."
         },
         {
           onClick: () => {
@@ -805,7 +805,7 @@ export function getMarketScenario(name, character) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "Screw someplace else! This WAS affordable!",
+                dialog: "I don't want to go someplace else! This used to be the best stall in the market!",
                 emote: Emotes.sad
               }
             });
@@ -839,12 +839,12 @@ export function getMarketScenario(name, character) {
               points: points + 1,
               response: {
                 dialog:
-                  "Yeah well, now these prices are abhorrent!",
+                  "Yeah well, now she's driving her customers away!",
                 emote: Emotes.sad
               }
             });
           },
-          text: "SHUT IT!!! It’s HER choice"
+          text: "Hey! It’s HER choice"
         }
       ]
     },
@@ -907,7 +907,7 @@ export function getMarketScenario(name, character) {
             });
           },
           text:
-            "Okay, well I’m going to leave. Hopefully, y'all can play nice."
+            "Okay, well I’m going to leave. Hope the rest of your day goes better."
         },
         {
           onClick: () => {
@@ -1043,8 +1043,8 @@ export function getParkScenario(name, character) {
               points: points + 3,
               response: {
                 dialog:
-                  "So high brow!",
-                emote: Emotes.sad
+                  "...Sounds, uh, exciting!",
+                emote: Emotes.neutral
               }
             });
           },
@@ -1059,7 +1059,7 @@ export function getParkScenario(name, character) {
               gameCounter: gameCounter + 1,
               points: points + 4,
               response: {
-                dialog: "Pretty good! I've been working on my car!",
+                dialog: "It's going great! I've been working on my car!",
                 emote: Emotes.happy
               }
             });
