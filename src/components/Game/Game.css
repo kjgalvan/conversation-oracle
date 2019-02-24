@@ -145,7 +145,8 @@ body{
     margin-top: 1.2vh;
 }
 
-.Submit{
+.Submit.ButtonOverride{
+    height: auto;
     margin-top: 1.2vh;
     margin-left: 1.2vh;
     margin-right: 1.2vh;
@@ -166,6 +167,7 @@ body{
 }
 
 .ButtonOverride{
+    height: 100%;
     color: #26292f;
     background-color: #A1AFA0;
     border-color: #798478;
@@ -189,5 +191,9 @@ body{
     }
     .col {
         padding: .5vh;
+    }
+    .Dialog {
+        padding: 1vh;
+        border-radius: 1.5vh;
     }
 }
