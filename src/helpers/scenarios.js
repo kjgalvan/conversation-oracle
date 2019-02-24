@@ -5,7 +5,7 @@ export function getGroceryScenario(name) {
     // buttons
     {
       dialog:
-        "You're at the local grocery store when you spot an old acquaintance. It's too late to find another route and you already made eye contact.",
+        "You're at the local grocery store when you spot an old acquaintance.",
       emote: Emotes.neutral,
       buttons: []
     },
@@ -32,7 +32,7 @@ export function getGroceryScenario(name) {
               gameCounter: gameCounter + 3,
               points: points + 3,
               response: {
-                dialog: "Oh nice.",
+                dialog: "Good!",
                 emote: Emotes.happy
               }
             });
@@ -64,7 +64,7 @@ export function getGroceryScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "Yeah same.",
+                dialog: "That's good, but I hope your day gets even better!",
                 emote: Emotes.neutral
               }
             });
@@ -80,7 +80,7 @@ export function getGroceryScenario(name) {
               points: points + 1,
               gameCounter: gameCounter + 1,
               response: {
-                dialog: "Okay... ",
+                dialog: "...Is that supposed to be a joke?",
                 emote: Emotes.sad
               }
             });
@@ -95,7 +95,7 @@ export function getGroceryScenario(name) {
       buttons: []
     },
     {
-      dialog: "I've been trying to move of my parents house plus work.",
+      dialog: "I've been trying to move of my parents house, and have been busy with work.",
       emote: Emotes.happy,
       buttons: [
         {
@@ -107,7 +107,7 @@ export function getGroceryScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "Yeah! (Did they even listen)",
+                dialog: "Yeah...! (Are you even listening?)",
                 emote: Emotes.sad
               }
             });
@@ -124,8 +124,8 @@ export function getGroceryScenario(name) {
               points: points + 3,
               response: {
                 dialog:
-                  "I work at the local animal shelter, but my hear breaks every time we have put down one....",
-                emote: Emotes.sad
+                  "I work at the local animal shelter, It's great to know I'm making a difference!",
+                emote: Emotes.happy
               }
             });
           },
@@ -140,7 +140,7 @@ export function getGroceryScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               response: {
-                dialog: "Oh, um, I guess.",
+                dialog: "Oh, um, I guess...?",
                 emote: Emotes.sad
               }
             });
@@ -157,13 +157,13 @@ export function getGroceryScenario(name) {
               points: points + 4,
               response: {
                 dialog:
-                  "Haha, well I think we'll see! I've been thinking of moving out since after high school.",
-                emote: Emotes.neutral
+                  "Haha, well I guess we'll see! I've been thinking of moving out since graduating high school.",
+                emote: Emotes.happy
               }
             });
           },
           text:
-            "You’re moving out? That’s so cool! Oh, but are you ready to live on your own? "
+            "You’re moving out? That’s so cool! Are you ready to live on your own? "
         }
       ]
     },
@@ -184,9 +184,10 @@ export function getGroceryScenario(name) {
               ...this.state,
               gameCounter: gameCounter + 1,
               points: points + 1,
+              gameOver: "What is your problem?!",
               response: {
-                dialog: "Oh... uh.",
-                emote: Emotes.neutral
+                dialog: "",
+                emote: Emotes.sad
               }
             });
           },
@@ -223,7 +224,7 @@ export function getGroceryScenario(name) {
               }
             });
           },
-          text: "That’s so crazy, we both like the same brand of cereal! "
+          text: "Oh, I love that cereal! "
         },
         {
           onClick: () => {
@@ -239,7 +240,7 @@ export function getGroceryScenario(name) {
               }
             });
           },
-          text: "Instant Noodles… you didn’t tell me you were in college. "
+          text: "Instant Noodles… you didn’t tell me you were in college?"
         }
       ]
     },
@@ -261,8 +262,8 @@ export function getGroceryScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 3,
               response: {
-                dialog: "Wow, I can see why you’d be so busy.",
-                emote: Emotes.neutral
+                dialog: "Oh, I certainly understand that.",
+                emote: Emotes.happy
               }
             });
           },
@@ -277,7 +278,7 @@ export function getGroceryScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "Oh, yeah I see.",
+                dialog: "Oh, it's always nice to take time to relax!",
                 emote: Emotes.neutral
               }
             });
@@ -294,7 +295,7 @@ export function getGroceryScenario(name) {
               points: points + 1,
               response: {
                 dialog: "Oh um, I'm sorry to hear that...",
-                emote: Emotes.neutral
+                emote: Emotes.sad
               }
             });
           },
@@ -311,7 +312,7 @@ export function getGroceryScenario(name) {
               points: points + 4,
               response: {
                 dialog:
-                  "Oh I love Bell Taco! And a lawyer that's cool. My mom runs a practice you know.",
+                  "Oh I love Bell Taco! And a lawyer, that's cool. My mom runs a practice, you know.",
                 emote: Emotes.happy
               }
             });
@@ -328,7 +329,7 @@ export function getGroceryScenario(name) {
     },
     {
       dialog:
-        "Narrator: You two are hogging the grocery lane for a while now. Time to wrap this conversation up! ",
+        "Narrator: You two have been blocking the aisle for a while now. Time to wrap this conversation up!",
       emote: Emotes.neutral,
       buttons: [
         {
@@ -346,7 +347,7 @@ export function getGroceryScenario(name) {
             });
           },
           text:
-            "Well it was great talking to you, but I have to get going. See you! "
+            "Well it was great talking to you, but I have to get going. See you!"
         },
         {
           onClick: () => {
@@ -358,7 +359,7 @@ export function getGroceryScenario(name) {
               points: points + 1,
               response: {
                 dialog: "(They watch you walk away)",
-                emote: Emotes.neutral
+                emote: Emotes.sad
               }
             });
           },
@@ -378,7 +379,7 @@ export function getGroceryScenario(name) {
               }
             });
           },
-          text: "Okay then see you. "
+          text: "Okay then see you."
         },
         {
           onClick: () => {
@@ -406,7 +407,7 @@ export function getGroceryScenario(name) {
     },
     {
       dialog:
-        "Narrator: Scene. As you can see, short encounters like these at the grocery store don’t have to be scary.",
+        "Narrator: As you can see, short encounters like these at the grocery store don’t have to be scary.",
       emote: Emotes.neutral,
       buttons: []
     },
@@ -459,7 +460,7 @@ export function getSchoolScenario(name) {
       buttons: []
     },
     {
-      dialog: "You want to start a conversation with them.",
+      dialog: "Narrator: You should start a conversation with them.",
       emote: Emotes.neutral,
       buttons: [
         {
@@ -488,7 +489,7 @@ export function getSchoolScenario(name) {
               points: points + 3,
               response: {
                 dialog: "Hi.",
-                emote: Emotes.sad
+                emote: Emotes.happy
               }
             });
           },
@@ -503,7 +504,7 @@ export function getSchoolScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               response: {
-                dialog: "I normally sit here!!!",
+                dialog: "Waiting for class to star?",
                 emote: Emotes.sad
               }
             });
@@ -519,8 +520,9 @@ export function getSchoolScenario(name) {
               ...this.state,
               gameCounter: gameCounter + 1,
               points: points + 1,
+              gameOver: "You seem confused, this is my assigned seat."
               response: {
-                dialog: "Alright, I'll move over... sheesh...",
+                dialog:  "Bossing people around and acting entitled is not very sociable!",
                 emote: Emotes.sad
               }
             });
@@ -548,7 +550,7 @@ export function getSchoolScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "Ah, nice. And it's icy.",
+                dialog: "I'm Icy, nice to meet you.",
                 emote: Emotes.happy
               }
             });
@@ -601,13 +603,13 @@ export function getSchoolScenario(name) {
               points: points + 3,
               response: {
                 dialog:
-                  "Oh, SAME. I have three essays due tomorrow that I haven't started on. And it's Sarah.",
+                  "Oh, SAME. I have three essays due tomorrow that I haven't started on. And it's Icy.",
                 emote: Emotes.sad
               }
             });
           },
           text:
-            "Okay, I guess. I'm struggling with assignments right now. What's your name?"
+            "Okay, I guess. I'm struggling with some of these assignments right now. What's your name?"
         }
       ]
     },
@@ -618,7 +620,7 @@ export function getSchoolScenario(name) {
     },
     {
       dialog:
-        "Narrator: You've had a pretty good conversation. How will you close it off smoothly?",
+        "Narrator: Class will begin soon. How will you close your conversation?",
       emote: Emotes.neutral,
       buttons: [
         {
@@ -630,7 +632,7 @@ export function getSchoolScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 3,
               response: {
-                emote: Emotes.happy,
+                emote: Emotes.neutral,
                 dialog: "Nice to meet you, too."
               }
             });
@@ -665,7 +667,7 @@ export function getSchoolScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                emote: Emotes.happy,
+                emote: Emotes.neutral,
                 dialog: "See ya!"
               }
             });
@@ -682,12 +684,12 @@ export function getSchoolScenario(name) {
               points: points + 1,
               gameOver: "That was rude. Try manners next time.",
               response: {
-                dialog: "Really? Why would you say that? Later, normie.",
+                dialog: "You should try to get to know people before burning bridges.",
                 emote: Emotes.sad
               }
             });
           },
-          text: "You know, you're pretty weird. Alright, talk to you later!"
+          text: "You know, you're pretty weird."
         }
       ]
     },
@@ -743,7 +745,7 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               response: {
-                dialog: "Umm, all's good in the hood, BRO.",
+                dialog: "Umm, what?",
                 emote: Emotes.sad
               }
             });
@@ -759,7 +761,7 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "(mockingly) Very well, my good sir.",
+                dialog: "Very well!",
                 emote: Emotes.neutral
               }
             });
@@ -774,14 +776,14 @@ export function getParkScenario(name) {
               ...this.state,
               gameCounter: gameCounter + 1,
               points: points + 1,
-              gameOver: "That was not nice. You just lost your job.",
+              gameOver: "You're not the type I expect to see in the office tomorrow",
               response: {
                 dialog: "YOU'RE FIRED!!!",
                 emote: Emotes.sad
               }
             });
           },
-          text: "Why are you here? You’re rich!"
+          text: "Why are you here? You’re not the type I'd expect to see out in nature!"
         }
       ]
     },
@@ -946,7 +948,7 @@ export function getParkScenario(name) {
     },
     {
       dialog:
-        "You’ve had both a friendly and a serious conversation so far. How do you close this off smoothly?",
+        "How do you close this off smoothly?",
       emote: Emotes.neutral,
       buttons: [
         {
@@ -1092,7 +1094,7 @@ export function getMarketScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               gameOver:
-                "Okay, you avoided the situation. That's decent from your perspective, but not helpful to the community.",
+                "Okay, you avoided the situation. That may be a good decision, but maybe you could have done more.",
               response: {
                 dialog: "",
                 emote: Emotes.sad
