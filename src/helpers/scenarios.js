@@ -712,7 +712,7 @@ export function getParkScenario(name) {
   var scenario = [
     {
       dialog:
-        "Narrator: You meet your new boss, Mr. Hoss, at the park by chance. You are walking opposite ways and he appears as though he wants to speak with you. How do you greet him?",
+        "Narrator: You meet your new boss, Mr. Hoss, at the park by chance. You are walking opposite ways and they appears as though they wants to speak with you. How do you greet him?",
       emote: Emotes.neutral,
       buttons: []
     },
