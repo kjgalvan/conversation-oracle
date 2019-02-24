@@ -3,7 +3,7 @@ import React from 'react';
 class Score extends React.Component {
   render() {
     return (
-      <p>{this.props.points}</p>
+      <p>Score: {this.props.points}</p>
     );
   }
 }
