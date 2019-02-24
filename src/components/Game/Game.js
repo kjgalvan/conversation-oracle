@@ -27,6 +27,7 @@ class Game extends React.Component {
     }
 
     this.getGroceryScenario = getGroceryScenario.bind(this);
+    this.getSchoolScenario = getSchoolScenario.bind(this);
   }
 
   componentDidMount() {
