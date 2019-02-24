@@ -104,7 +104,7 @@ class Game extends React.Component {
           <Row>
             <Col>
               <h1>Scenario Complete!</h1>
-              <p>Your final score was <b>{(Number.parseFloat(this.state.points / this.state.total).toFixed(2)) * 100}%</b>.</p>
+              <p>Your final score was <b>{(Number.parseFloat((this.state.points / this.state.total) * 100).toFixed(0))}%</b>.</p>
             </Col>
           </Row>
         );
