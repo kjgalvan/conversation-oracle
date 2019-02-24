@@ -2,29 +2,29 @@ import { Emotes } from "./enums";
 
 export function getGroceryScenario(name) {
   var scenario = [
-      // buttons
-      {
-        dialog: "You're at the local grocery store when you spot an old acquantance. It's too late to find another route and you already made eye contact.",
-        emote: Emotes.neutral,
-        buttons: []
-      },
-      {
-        dialog: "Your Brain: Okay, don't mess this up!",
-        emote: Emotes.neutral,
-        buttons: []
-      },
-      {
-        dialog: "Brian: Oh hey, " + name + "!",
-        emote: Emotes.happy,
-        buttons: []
-      },
-      {
-        dialog: "I haven't seen you in a while, how have you been?",
-        emote: Emotes.happy,
-        buttons: [
-          {
-            onClick: () => { console.log("Pressed"); },
-            text: "Good and you?"
+    {
+      dialog:
+        "Narrator: You're at the local grocery store when you spot an old acquantance. It's too late to find another route and you already made eye contact.",
+      emote: Emotes.neutral,
+      buttons: []
+    },
+    {
+      dialog: "Your Brain: Okay, don't mess this up!",
+      emote: Emotes.neutral,
+      buttons: []
+    },
+    {
+      dialog: "Brian: Oh hey, " + this.props.text,
+      emote: Emotes.happy,
+      buttons: []
+    },
+    {
+      dialog: "I haven't seen you in a while, how have you been?",
+      emote: Emotes.happy,
+      buttons: [
+        {
+          onClick: () => {
+            console.log("Pressed");
           },
           text: "Good and you?"
         },
