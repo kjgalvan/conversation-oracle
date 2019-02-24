@@ -52,9 +52,11 @@ export function getGroceryScenario(name) {
           {
             onClick: () => { 
               const { gameCounter } = this.state;
+              const { points } = this.state;
               this.setState({
                 ...this.state,
                 gameCounter: gameCounter+1,
+                points: points + 4,
                 response: {
                   dialog: "That's great to hear!",
                   emote: Emotes.happy,
@@ -66,9 +68,11 @@ export function getGroceryScenario(name) {
           {
             onClick: () => { 
               const { gameCounter } = this.state;
+              const { points } = this.state;
               this.setState({
                 ...this.state,
                 gameCounter: gameCounter+1,
+                points: points + 2,
                 response: {
                   dialog: "Yeah same.",
                   emote: Emotes.neutral,
@@ -80,8 +84,10 @@ export function getGroceryScenario(name) {
           {
             onClick: () => { 
               const { gameCounter } = this.state;
+              const { points } = this.state;
               this.setState({
                 ...this.state,
+                points: points + 1,
                 gameCounter: gameCounter+1,
                 response: {
                   dialog: "Okay... ",
@@ -105,11 +111,13 @@ export function getGroceryScenario(name) {
           {
             onClick: () => { 
               const { gameCounter } = this.state;
+              const { points } = this.state;
               this.setState({
                 ...this.state,
                 gameCounter: gameCounter+1,
+                points: points + 2,
                 response: {
-                  dialog: "Okay... ",
+                  dialog: "Yeah! (Did they even listen)",
                   emote: Emotes.sad,
                   }
               });
@@ -133,12 +141,36 @@ export function getGroceryScenario(name) {
             text: "Oh, where do you work? "
           },
           {
-            onClick: () => { console.log("Pressed"); },
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter+1,
+                points: points + 1,
+                response: {
+                  dialog: "Oh, um, I guess.",
+                  emote: Emotes.sad,
+                  }
+              });
+             },
             text: "Your folks are lucky. "
           },
           {
-            onClick: () => { console.log("Pressed"); },
-            text: "You’re moving out? That’s so cool! Oh, but are ready to live on your own? "
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter+1,
+                points: points + 4,
+                response: {
+                  dialog: "Haha, well I think we'll see! I've been thinking of moving out since after high school.",
+                  emote: Emotes.neutral,
+                  }
+              });
+             },
+            text: "You’re moving out? That’s so cool! Oh, but are you ready to live on your own? "
           },
         ]
       },
@@ -152,19 +184,67 @@ export function getGroceryScenario(name) {
         emote: Emotes.neutral,
         buttons: [
           {
-            onClick: () => { console.log("Pressed"); },
-            text: "Oh I see you’re buying Plan B how fun! "
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter + 1,
+                points: points + 1,
+                response: {
+                  dialog: "Oh... uh.",
+                  emote: Emotes.neutral,
+                  }
+              });
+             },
+            text: "Oh I see you're finally addressing your weight problems."
           },
           {
-            onClick: () => { console.log("Pressed"); },
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter + 1,
+                points: points + 2,
+                response: {
+                  dialog: "A man of what? I just like Mountain Dew.",
+                  emote: Emotes.neutral,
+                  }
+              });
+             },
             text: "Ah Mountain Dew, I see you’re a man of culture. "
           },
           {
-            onClick: () => { console.log("Pressed"); },
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter + 1,
+                points: points + 4,
+                response: {
+                  dialog: "You love Berry Berry Oats too?? It’s the best cereal on the market.",
+                  emote: Emotes.happy,
+                  }
+              });
+             },
             text: "That’s so crazy, we both like the same brand of cereal! "
           },
           {
-            onClick: () => { console.log("Pressed"); },
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter + 1,
+                points: points + 3,
+                response: {
+                  dialog: "Haha, they are just so affordable.",
+                  emote: Emotes.happy,
+                  }
+              });
+             },
             text: "Instant Noodles… you didn’t tell me you were in college. "
           },
         ]
@@ -179,19 +259,67 @@ export function getGroceryScenario(name) {
         emote: Emotes.neutral,
         buttons: [
           {
-            onClick: () => { console.log("Pressed"); },
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter + 1,
+                points: points + 3,
+                response: {
+                  dialog: "Wow, I can see why you’d be so busy.",
+                  emote: Emotes.neutral,
+                  }
+              });
+             },
             text: "Oh you know, just busy with school and work. "
           },
           {
-            onClick: () => { console.log("Pressed"); },
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter + 1,
+                points: points + 2,
+                response: {
+                  dialog: "Oh, yeah I see.",
+                  emote: Emotes.neutral,
+                  }
+              });
+             },
             text: "I’m doing alright, you know chilling. "
           },
           {
-            onClick: () => { console.log("Pressed"); },
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter + 1,
+                points: points + 3,
+                response: {
+                  dialog: "Oh um, I'm sorry to hear that...",
+                  emote: Emotes.neutral,
+                  }
+              });
+             },
             text: "Bad. I feel like my girlfriend doesn’t love me anymore. I’ve just been so lonely. "
           },
           {
-            onClick: () => { console.log("Pressed"); },
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter + 1,
+                points: points + 4,
+                response: {
+                  dialog: "Oh I love Bell Taco! And a lawyer that's cool. My mom runs a practice you know.",
+                  emote: Emotes.happy,
+                  }
+              });
+             },
             text: "Hmm, well I’ve been going to college to become a lawyer for a while now. I also work at Bell Taco on campus there, so I’ve been pretty busy! "
           },
         ]
@@ -206,19 +334,67 @@ export function getGroceryScenario(name) {
         emote: Emotes.neutral,
         buttons: [
           {
-            onClick: () => { console.log("Pressed"); },
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter + 1,
+                points: points + 2,
+                response: {
+                  dialog: "Okay then, have a good day!",
+                  emote: Emotes.nhappy,
+                  }
+              });
+             },
             text: "Well it was great talking to you, but I have to get going see you! "
           },
           {
-            onClick: () => { console.log("Pressed"); },
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter + 1,
+                points: points + 4,
+                response: {
+                  dialog: "(Brian watches you walk away)",
+                  emote: Emotes.neutral,
+                  }
+              });
+             },
             text: "(Walk away) "
           },
           {
-            onClick: () => { console.log("Pressed"); },
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter + 1,
+                points: points + 2,
+                response: {
+                  dialog: "See you.",
+                  emote: Emotes.neutral,
+                  }
+              });
+             },
             text: "Okay then see you. "
           },
           {
-            onClick: () => { console.log("Pressed"); },
+            onClick: () => { 
+              const { gameCounter } = this.state;
+              const { points } = this.state;
+              this.setState({
+                ...this.state,
+                gameCounter: gameCounter + 1,
+                points: points + 4,
+                response: {
+                  dialog: "Yeah for sure, I’d like that!.",
+                  emote: Emotes.happy,
+                  }
+              });
+             },
             text: "It was great talking to you, can I have you’re contact info so we can keep in touch? "
           },
         ]
