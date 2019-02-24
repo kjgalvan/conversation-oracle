@@ -520,7 +520,7 @@ export function getSchoolScenario(name) {
               ...this.state,
               gameCounter: gameCounter + 1,
               points: points + 1,
-              gameOver: "You seem confused, this is my assigned seat."
+              gameOver: "You seem confused, this is my assigned seat.",
               response: {
                 dialog:  "Bossing people around and acting entitled is not very sociable!",
                 emote: Emotes.sad
