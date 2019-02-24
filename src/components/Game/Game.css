@@ -5,7 +5,9 @@ body{
     color: #7A747F;
     margin: 0 0 0 0;
     background-image: linear-gradient(to bottom right, #FEEAFA 50%, #CBC0D3 50%);
-    
+}
+p {
+    font-size: .9rem;
 }
 
 .Score{
@@ -30,8 +32,6 @@ body{
     background-color:  #DEE2FF;
     min-width: .3vh;
     min-height: .3vh;
-    max-width: 100vh;
-
     height: 100%;
     display: -webkit-box;
     display: -moz-box;
@@ -142,7 +142,7 @@ body{
 .Dialog.solo{
     margin: 2vh;
     padding-bottom: 2vh;
-    width: 100%;
+    width: 60%;
 }
 
 .Dialog * p{
@@ -166,11 +166,8 @@ body{
     display: flex;
 }
 
-.Horizontal {
-    margin: 1vh 0;
-}
-
 .ButtonOverride{
+    font-size: .9rem;
     height: 100%;
     color: #FEEAFA;
     border: 2px solid;
@@ -190,52 +187,70 @@ body{
     margin: auto;
 }
 
-@media screen and (max-width: 600px) {
-    .container {
-        padding: 0;
-        padding-bottom: 2vh;
-    }
-    .col {
-        padding: .5vh;
-    }
-    .Dialog {
-        padding: 1vh;
-        border-radius: 1.5vh;
-    }
+.form-control {
+    font-size: 0.9rem;
 }
 
-@media screen and (min-width: 1440px) {
-    p {
-        font-size: 1.2rem;
+.DisplayContainer {
+    width: 60%;
+}
+
+.col.ButtonCol {
+    padding: 1vh;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        padding: 0;
+        padding-bottom: 1vh;
+    }
+    .col {
+        padding: .2vh;
+    }
+    .col.ButtonCol{
+        padding: .2vh;
+    }
+    .Dialog {
+        padding: .5vh;
+        border-radius: 1.0vh;
+    }
+    .Game {
+        border-radius: 3vh;
+    }
+    .Dialog.solo {
+        width: 90%;
+    }
+    .DisplayContainer {
+        width: 90%;
     }
     .ButtonOverride {
-        font-size: 1.2rem;
+        padding: 1px;
     }
-    .form-control {
-        font-size: 1.2rem;
+    .Submit.ButtonOverride {
+        padding: 5px;
     }
 }
 
 @media screen and (min-width: 1800px) {
     p {
-        font-size: 1.5rem;
+        font-size: 1.0rem;
     }
     .ButtonOverride {
-        font-size: 1.5rem;
+        font-size: 1.0rem;
     }
     .form-control {
-        font-size: 1.5rem;
+        font-size: 1.0rem;
     }
 }
 
 @media screen and (min-width: 2500px) {
     p {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
     .ButtonOverride {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
     .form-control {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 }

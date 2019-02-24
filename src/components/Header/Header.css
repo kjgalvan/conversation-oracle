@@ -56,3 +56,38 @@ div.letterO{
     border: 1vh double #798396;
     border-radius: 5vh;
 }
+
+@media screen and (max-width: 800px) {
+    .logo{
+        font-size: 3vh;
+        min-width: .3vh;
+        min-height: .3vh;
+    }
+    div.conversation{
+        padding-left: .2vh;
+        padding-right: .8vh;
+        border-bottom-style: dotted;
+        border-bottom-width: 4px;
+    }
+
+    div.oracle{
+        padding-left: .2vh;
+        padding-right: .8vh;
+        border-bottom-width: 4px;
+    }
+
+    div.letterC{
+        padding-left: 1.2vh;
+        padding-right: 1.2vh;
+        font-size: 3vh;
+        border: .5vh double #798396;
+        border-radius: 3vh;
+    }
+    div.letterO{
+        padding-left: 1.2vh;
+        padding-right: 1.2vh;
+        font-size: 3vh;
+        border: .5vh double #798396;
+        border-radius: 3vh;
+    }
+}
