@@ -58,7 +58,7 @@ class Game extends React.Component {
       case Scenarios.grocery: {
         return {
           array: this.getGroceryScenario(this.props.name, this.props.character),
-          total: 15
+          total: 20
         };
       }
       case Scenarios.school: {
