@@ -1,7 +1,8 @@
 import { Emotes } from './enums';
 
-export function getExampleScenario(name) {
+export function getGroceryScenario(name) {
   var scenario = [
+      // buttons
       {
         dialog: "You're at the local grocery store when you spot an old acquantance. It's too late to find another route and you already made eye contact.",
         emote: Emotes.neutral,
@@ -13,7 +14,7 @@ export function getExampleScenario(name) {
         buttons: []
       },
       {
-        dialog: "Brian: Oh hey, " + this.props.text,
+        dialog: "Brian: Oh hey, " + name + "!",
         emote: Emotes.happy,
         buttons: []
       },

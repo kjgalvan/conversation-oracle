@@ -7,7 +7,7 @@ import Score from '../Score';
 import Buttons from '../Buttons';
 import { Scenario } from '../../helpers/enums';
 import {
-  getExampleScenario,
+  getGroceryScenario,
 } from '../../helpers/scenarios';
 
 class Game extends React.Component {
@@ -20,15 +20,16 @@ class Game extends React.Component {
       gameOver: null,
       gameCounter: 0,
       scenario: null,
-      next: [{ onClickHandler: this.nextSlide, text: "Next" }]
+      next: [{ onClick: this.nextSlide, text: "Next" }]
     }
-    this.getExampleScenario = getExampleScenario.bind(this);
+
+    this.getGroceryScenario = getGroceryScenario.bind(this);
   }
 
   componentDidMount() {
     this.setState({
       ...this.state,
-      scenario: this.getScenario("GROCERY")
+      scenario: this.getScenario(this.props.scenario)
     });
   }
 
@@ -43,12 +44,14 @@ class Game extends React.Component {
   getScenario = (scenario) => {
     switch(scenario) {
       case Scenario.grocery: {
-        return this.getExampleScenario();
+        return this.getGroceryScenario(this.props.name);
       }
 
       case Scenario.school: {
         // Return school scenario array
+        break;
       }
+      default: break;
     }
   }
 
@@ -68,7 +71,7 @@ class Game extends React.Component {
           </Row>
           <Row>
             <Col className="Dialog">
-              <Dialog  />
+              <Dialog text={this.state.scenario ? this.state.scenario[this.state.gameCounter].dialog : "Please choose a scenario."} />
             </Col>
           </Row>
           <Row>
