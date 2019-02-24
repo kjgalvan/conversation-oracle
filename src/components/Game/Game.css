@@ -170,16 +170,14 @@ p {
     font-size: .9rem;
     height: 100%;
     color: #FEEAFA;
-    border: 2px solid;
+    border: 2px solid #948C9A;
     background-color: #948C9A;
-    border-color: rgb(93, 87, 97);
 }
 
 .ButtonOverride:hover{
     color: #7A747F;
-    border: 2px solid;
-    background-color: #CBC0D3;
-    border-color: rgb(93, 87, 97);
+    border: 2px solid rgb(252, 215, 244);
+    background-color: rgb(252, 215, 244);
 }
 
 .row {

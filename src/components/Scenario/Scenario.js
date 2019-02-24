@@ -86,7 +86,7 @@ class Game extends React.Component {
 
   render() {
     if (this.state.scenario) {
-      if (this.state.scenario[this.state.gameCounter]) {
+      if (this.state.scenario[this.state.gameCounter] || this.state.gameOver) {
         return (
           <Row className="DisplayContainer">
             <Col>
@@ -139,21 +139,28 @@ class Game extends React.Component {
           <React.Fragment>
             <Row style={{ width: "100%", marginTop: "2vh" }}>
               <Col>
-                <h1 align="center">Scenario Complete!</h1>
+                <h1 align="center">{this.state.gameOver ? "Game Over!" : "Scenario Complete!"}</h1>
               </Col>
             </Row>
             <Row style={{ width: "100%" }}>
               <Col>
-                <p align="center">
-                  Your final score was{" "}
-                  <b>
-                    {Number.parseFloat(
-                      (this.state.points / this.state.total) * 100
-                    ).toFixed(0)}
-                    %
-                  </b>
-                  .
-                </p>
+                {
+                  this.state.gameOver ?
+                  <p align="center">
+                    {this.state.gameOver}
+                  </p>
+                  :
+                  <p align="center">
+                    Your final score was{" "}
+                    <b>
+                      {Number.parseFloat(
+                        (this.state.points / this.state.total) * 100
+                      ).toFixed(0)}
+                      %
+                    </b>
+                    .
+                  </p>
+                }
               </Col>
             </Row>
           </React.Fragment>
