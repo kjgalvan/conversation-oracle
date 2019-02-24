@@ -2,17 +2,21 @@ html, body{
     height:100%;
 }
 body{
+    color: #7A747F;
     margin: 0 0 0 0;
-    background-image: linear-gradient(to bottom right, #A9B2AC 50%, #717C79 50%);
+    background-image: linear-gradient(to bottom right, #FEEAFA 50%, #CBC0D3 50%);
     
 }
 
 .Score{
     /*border: solid 2px;
     border-color: orange;*/
+    padding-top: 1vh;
     min-width: .3vh;
     min-height: .3vh;
-    text-align: right;
+    text-align: center;
+    font-size: 3vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .Game{
     display: flex;
@@ -21,9 +25,9 @@ body{
     margin:auto;
     padding-bottom: 2vh;
     border: solid 2px;
-    border-color:  #575761;
+    border-color:  #818EAA;
     border-radius: 5vh 5vh 5vh 5vh;
-    background-color:  #9DA5A0;
+    background-color:  #DEE2FF;
     min-width: .3vh;
     min-height: .3vh;
     max-width: 100vh;
@@ -127,9 +131,9 @@ body{
 .Dialog{
     margin:auto;
     border: solid 2px;
-    border-color: #A1AFA0;
+    border-color: #CBC0D3;
     border-radius: 3vh 3vh 3vh 3vh;
-    background-color: #CBD4C2;
+    background-color: #FEEAFA;
     min-width: .3vh;
     min-height: .3vh;
     width: 100%;
@@ -168,15 +172,16 @@ body{
 
 .ButtonOverride{
     height: 100%;
-    color: #26292f;
-    background-color: #A1AFA0;
-    border-color: #798478;
+    color: #7A747F;
+    background-color: #CBC0D3;
+    border-color: #948C9A;
 }
 
 .ButtonOverride:hover{
-    color: #26292f;
-    background-color: #798478;
-    border-color: #798478;
+    color: #FEEAFA;
+    border: 2px solid;
+    background-color: #948C9A;
+    border-color: #948C9A;
 }
 
 .row {
