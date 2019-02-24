@@ -1,9 +1,8 @@
 body{
     height: 100%;
     margin: 0 0 0 0;
-    background-image: linear-gradient(to top, #7a93a5 0%, #bed3dd 100%);
-}
-
+    /*background-image: linear-gradient(to top, #7a93a5 0%, #bed3dd 100%);
+*/}
 
 .Score{
     /*border: solid 2px;
@@ -20,9 +19,9 @@ body{
 
     margin:auto;
     border: solid 2px;
-    border-color:  #336699;
+    border-color:  #8896AB;
     border-radius: 5vh 5vh 5vh 5vh;
-    background-color:  #6699cc;
+    background-color:  #BACFE2;
     min-width: .3vh;
     min-height: .3vh;
     max-width: 100vh;
@@ -123,9 +122,9 @@ body{
 .Dialog{
     margin:auto;
     border: solid 2px;
-    border-color: black;
+    border-color: #F2D68C;
     border-radius: 3vh 3vh 3vh 3vh;
-    background-color: white;
+    background-color: #FFFBF0;
     min-width: .3vh;
     min-height: .3vh;
     width: 100vh;
@@ -154,6 +153,8 @@ body{
     display: flex;
 }
 
-.Horizontal {
-    margin: 1vh 0;
+.ButtonOverride{
+    color: #26292f;
+    background-color: #798478;
+    border-color: #798478;
 }

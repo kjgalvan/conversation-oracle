@@ -23,7 +23,7 @@
 div.conversation{
     padding-left: .2vh;
     padding-right: 2.2vh;
-    color: #336699;
+    color: #FFECBB;
     border-bottom-style: dotted;
     border-bottom-width: 4px;
     border-bottom-color: #336699;
@@ -32,7 +32,7 @@ div.conversation{
 div.oracle{
     padding-left: .2vh;
     padding-right: 2.2vh;
-    color: #336699;
+    color: #FFECBB;
     border-bottom-style: dotted;
     border-bottom-width: 4px;
     border-bottom-color: #336699;
@@ -40,19 +40,19 @@ div.oracle{
 
 div.letterC{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', serif;
-    color: #6699cc;
+    color: #F2D68C;
     padding-left: 2.2vh;
     padding-right: 2.2vh;
     font-size: 5vh;
-    border: 4px double #FFF5D9;
+    border: 4px double #FFFFFD;
     border-radius: 5vh;
 }
 div.letterO{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', serif;
-    color:#6699cc;
+    color:#F2D68C;
     padding-left: 2.2vh;
     padding-right: 2.2vh;
     font-size: 5vh;
-    border: 4px double #FFF5D9;
+    border: 4px double #FFFFFD;
     border-radius: 5vh;
 }
