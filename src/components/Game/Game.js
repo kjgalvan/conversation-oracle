@@ -41,6 +41,7 @@ class Game extends React.Component {
     const { gameCounter } = this.state;
     this.setState({
       ...this.state,
+      response: null,
       gameCounter: gameCounter+1,
     })
   }
@@ -91,16 +92,21 @@ class Game extends React.Component {
                   </Row>
                   <Row>
                     <Col>
-                      <Display key={this.state.character} className="d-flex justify-content-center Display Img" character={this.state.character} emote={this.state.scenario[this.state.gameCounter].emote} />
+                      <Display
+                        key={this.state.character}
+                        className="d-flex justify-content-center Display Img"
+                        character={this.state.character}
+                        emote={this.state.response ? this.state.response.emote : this.state.scenario[this.state.gameCounter].emote}
+                      />
                     </Col>
                   </Row>
                   <Row>
                     <Col className="Dialog">
-                      <Dialog text={this.state.scenario ? this.state.scenario[this.state.gameCounter].dialog : "Please choose a scenario."} />
+                      <Dialog text={this.state.response ? this.state.response.dialog : this.state.scenario[this.state.gameCounter].dialog} />
                     </Col>
                   </Row>
                   <Row>
-                    <Buttons buttons={this.state.next} />
+                    <Buttons buttons={this.state.scenario[this.state.gameCounter].buttons.length === 0 ? this.state.next : this.state.scenario[this.state.gameCounter].buttons} />
                   </Row>
                 </Col>
               </Row>
@@ -138,7 +144,7 @@ class Game extends React.Component {
             </React.Fragment>
           );
         }
-      } else { return <p>Hi, {this.props.name}! Please pick a scenario.</p> } 
+      } else { return <p>Hi, {this.props.name}! Please pick a scenario.</p> }
     } else {
       return (
         <React.Fragment>
