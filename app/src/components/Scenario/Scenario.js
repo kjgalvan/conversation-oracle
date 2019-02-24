@@ -67,16 +67,16 @@ class Scenario extends React.Component {
           total: 12
         };
       }
-      case Scenarios.park: {
-        return {
-          array: this.getParkScenario(this.props.name, this.props.character),
-          total: 16
-        };
-      }
       case Scenarios.market: {
         return {
           array: this.getMarketScenario(this.props.name, this.props.character),
           total: 12
+        };
+      }
+      case Scenarios.park: {
+        return {
+          array: this.getParkScenario(this.props.name, this.props.character),
+          total: 16
         };
       }
       default:

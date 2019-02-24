@@ -511,7 +511,6 @@ export function getSchoolScenario(name, character) {
           },
           text: "What are you doing here?"
         },
-
         {
           onClick: () => {
             const { gameCounter } = this.state;
@@ -1041,10 +1040,10 @@ export function getParkScenario(name, character) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 2,
+              points: points + 3,
               response: {
                 dialog:
-                  "So high brow! There's just SO much quality entertainment out there...",
+                  "So high brow!",
                 emote: Emotes.sad
               }
             });
