@@ -4,7 +4,7 @@ class Dialog extends React.Component {
   render(){
     return(
       <div>
-        <p>Allo, min!!!</p>
+        <p>{this.props.text}</p>
       </div>
     );
   }
