@@ -12,6 +12,6 @@ export const Emotes = {
 };
 
 export const Characters = {
-  popo: "popo",
-  nana: "nana"
+  popo: "Popo",
+  nana: "Nana"
 };

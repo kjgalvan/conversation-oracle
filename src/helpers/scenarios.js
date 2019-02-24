@@ -1,6 +1,6 @@
 import { Emotes } from "./enums";
 
-export function getGroceryScenario(name) {
+export function getGroceryScenario(name, character) {
   var scenario = [
     // buttons
     {
