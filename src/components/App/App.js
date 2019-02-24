@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import uuidv4 from 'uuid/v4';
 import Game from '../Game';
-import Navigation from '../Navigation';
+import Header from '../Header';
 import './App.css';
 
 class App extends Component {
@@ -32,8 +32,14 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navigation onClick={this.setScenario} />
-        <Game key={this.state.gameId} name={this.state.name} scenario={this.state.scenario} setName={this.setName} />
+        <Header />
+        <Game
+          key={this.state.gameId}
+          name={this.state.name}
+          scenario={this.state.scenario}
+          setName={this.setName}
+          setScenario={this.setScenario}
+        />
       </React.Fragment>
     );
   }

@@ -4,7 +4,7 @@ import Dialog from '../Dialog';
 import Display from '../Display';
 import Score from '../Score';
 import Buttons from '../Buttons';
-import { Scenario } from '../../helpers/enums';
+import { Scenarios } from '../../helpers/enums';
 import {
   getGroceryScenario,
   getSchoolScenario,
@@ -51,13 +51,13 @@ class Game extends React.Component {
 
   getScenario = (scenario) => {
     switch(scenario) {
-      case Scenario.grocery: {
+      case Scenarios.grocery: {
         return {
           array: this.getGroceryScenario(this.props.name, this.props.character),
           total: 20,
         };
       }
-      case Scenario.school: {
+      case Scenarios.school: {
         return {
           array: this.getSchoolScenario(this.props.name, this.props.character),
           total: 20,
