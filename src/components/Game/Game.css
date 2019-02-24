@@ -131,3 +131,8 @@
 .Game > button{
     justify-content: space-evenly;
 }
+
+.Buttons {
+    justify-content: center;
+    display: flex;
+}
