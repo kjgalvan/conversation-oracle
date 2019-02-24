@@ -4,12 +4,12 @@ export function getGroceryScenario(name, character) {
   const scenario = [
     {
       dialog:
-        `You're at the local grocery store when you spot an old acquaintance, ${character}.`,
+        `Narrator: You're at the local grocery store when you spot an old acquaintance, ${character}.`,
       emote: Emotes.neutral,
       buttons: []
     },
     {
-      dialog: "Your Brain: Okay, don't mess this up!",
+      dialog: "Narrator: Okay, don't mess this up!",
       emote: Emotes.neutral,
       buttons: []
     },
@@ -36,7 +36,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: `Good and you?`
+          text: `Good, and you?`
         },
         {
           onClick: () => {
@@ -64,7 +64,7 @@ export function getGroceryScenario(name, character) {
               points: points + 2,
               response: {
                 dialog: "That's good, but I hope your day gets even better!",
-                emote: Emotes.neutral
+                emote: Emotes.happy
               }
             });
           },
@@ -84,7 +84,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "It was going well until you came along."
+          text: "Well, it WAS going well..."
         }
       ]
     },
@@ -94,7 +94,7 @@ export function getGroceryScenario(name, character) {
       buttons: []
     },
     {
-      dialog: "I've been trying to move of my parents house, and have been busy with work.",
+      dialog: "So, I've been trying to move of my parents house. It's hard since I've been busy with work.",
       emote: Emotes.happy,
       buttons: [
         {
@@ -123,12 +123,12 @@ export function getGroceryScenario(name, character) {
               points: points + 3,
               response: {
                 dialog:
-                  "I work at the local animal shelter, It's great to know I'm making a difference!",
+                  "I work at the local animal shelter, It's great knowing I'm making a difference!",
                 emote: Emotes.happy
               }
             });
           },
-          text: "Oh, where do you work? "
+          text: "Oh, where do you work?"
         },
         {
           onClick: () => {
@@ -144,7 +144,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "Your folks are lucky."
+          text: "Your folks are SO lucky."
         },
         {
           onClick: () => {
@@ -162,7 +162,7 @@ export function getGroceryScenario(name, character) {
             });
           },
           text:
-            "You’re moving out? That’s so cool! Are you ready to live on your own? "
+            "You’re moving out? That’s so cool! Are you ready to live on your own?"
         }
       ]
     },
@@ -190,7 +190,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "Oh I see you're finally addressing your weight problems."
+          text: "Oh... I see you're finally addressing your weight problems."
         },
         {
           onClick: () => {
@@ -201,12 +201,12 @@ export function getGroceryScenario(name, character) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "What? I just like Mountain Dew.",
+                dialog: "What?... I just like Mountain Dew.",
                 emote: Emotes.neutral
               }
             });
           },
-          text: "Ah Mountain Dew, I see you’re quite cultured."
+          text: "Ah, Mountain Dew. I see you’re quite cultured."
         },
         {
           onClick: () => {
@@ -218,7 +218,7 @@ export function getGroceryScenario(name, character) {
               points: points + 4,
               response: {
                 dialog:
-                  "You love Berry Berry Oats too?? It’s the best cereal on the market.",
+                  "You love Berry Berry Oats too? It’s the best cereal on the market!",
                 emote: Emotes.happy
               }
             });
@@ -234,12 +234,12 @@ export function getGroceryScenario(name, character) {
               gameCounter: gameCounter + 1,
               points: points + 3,
               response: {
-                dialog: "Haha, they are just so affordable.",
+                dialog: "Haha, they're just SO affordable.",
                 emote: Emotes.happy
               }
             });
           },
-          text: "Instant Noodles… you didn’t tell me you were in college?"
+          text: "Instant Noodles… you're not still in college, are you?"
         }
       ]
     },
@@ -250,7 +250,7 @@ export function getGroceryScenario(name, character) {
     },
     {
       dialog: "That's enough about me though. What have you been up to?",
-      emote: Emotes.neutral,
+      emote: Emotes.happy,
       buttons: [
         {
           onClick: () => {
@@ -266,7 +266,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "Oh you know, just busy with school and work."
+          text: "Oh, you know! Just busy with school and work."
         },
         {
           onClick: () => {
@@ -277,12 +277,12 @@ export function getGroceryScenario(name, character) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "Oh, it's always nice to take time to relax!",
+                dialog: "Oh... it's always nice to take time to relax!",
                 emote: Emotes.neutral
               }
             });
           },
-          text: "I’m doing alright, you know chilling."
+          text: "I’m doing alright Just chillin', you know?."
         },
         {
           onClick: () => {
@@ -293,13 +293,13 @@ export function getGroceryScenario(name, character) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               response: {
-                dialog: "Oh um, I'm sorry to hear that...",
+                dialog: "Oh um...... I'm sorry to hear that...",
                 emote: Emotes.sad
               }
             });
           },
           text:
-            "Bad. I feel like my girlfriend doesn’t love me anymore. I’ve just been so lonely."
+            "Bad... I feel like my girlfriend doesn’t love me anymore. I’ve just been so lonely."
         },
         {
           onClick: () => {
@@ -311,13 +311,13 @@ export function getGroceryScenario(name, character) {
               points: points + 4,
               response: {
                 dialog:
-                  "Oh I love Bell Taco! And a lawyer, that's cool. My mom runs a practice, you know.",
+                  "Oh! I love Bell Taco! And, a lawyer?? That's so cool! My mom runs a practice, you know.",
                 emote: Emotes.happy
               }
             });
           },
           text:
-            "I’ve been going to law school a while now. I also work at Bell Taco, so I’ve been busy!"
+            "I’ve been going to law school for awhile now and I also work at Bell Taco!"
         }
       ]
     },
@@ -328,7 +328,7 @@ export function getGroceryScenario(name, character) {
     },
     {
       dialog:
-        "Narrator: You two have been blocking the aisle for a while now. Time to wrap this conversation up!",
+        "Narrator: You two have been blocking the aisle for a while now. It's time to wrap this conversation up!",
       emote: Emotes.neutral,
       buttons: [
         {
@@ -346,7 +346,7 @@ export function getGroceryScenario(name, character) {
             });
           },
           text:
-            "Well it was great talking to you, but I have to get going. See you!"
+            "Well, it was great talking to you, but I've got to get going. See you!"
         },
         {
           onClick: () => {
@@ -362,7 +362,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "(Walk away) "
+          text: "(Walk away)"
         },
         {
           onClick: () => {
@@ -378,7 +378,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "Okay then see you."
+          text: "...Okay then! See you."
         },
         {
           onClick: () => {
@@ -389,13 +389,13 @@ export function getGroceryScenario(name, character) {
               gameCounter: gameCounter + 1,
               points: points + 4,
               response: {
-                dialog: "Yeah for sure, I’d like that!.",
+                dialog: "Of course!! I’d love that!",
                 emote: Emotes.happy
               }
             });
           },
           text:
-            "It was great talking to you, can I have you’re contact info so we can keep in touch? "
+            "It was great talking to you again, can I have your contact info so we can keep in touch?"
         }
       ]
     },
@@ -451,16 +451,16 @@ export function getGroceryScenario(name, character) {
 }
 
 export function getSchoolScenario(name, character) {
+  const herPronoun = character === "Nana" ? "her" : "him";
   const scenario = [
-    // buttons
     {
       dialog:
-        "Narrator: You're at school, sitting next to someone you don't know, five minutes before class starts.",
+        "Narrator: You're at school sitting next to someone you don't know, five minutes before class starts.",
       emote: Emotes.neutral,
       buttons: []
     },
     {
-      dialog: "Narrator: You should start a conversation with them.",
+      dialog: `Narrator: You should start a conversation with ${herPronoun}.`,
       emote: Emotes.neutral,
       buttons: [
         {
@@ -502,9 +502,9 @@ export function getSchoolScenario(name, character) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 1,
+              points: points + 2,
               response: {
-                dialog: "Waiting for class to star?",
+                dialog: "Uh... Waiting for class to start?",
                 emote: Emotes.sad
               }
             });
@@ -520,15 +520,15 @@ export function getSchoolScenario(name, character) {
               ...this.state,
               gameCounter: gameCounter + 1,
               points: points + 1,
-              gameOver: "You seem confused, this is my assigned seat.",
+              gameOver: "Bossing people around and acting entitled is not very sociable!",
               response: {
-                dialog:  "Bossing people around and acting entitled is not very sociable!",
+                dialog:  "",
                 emote: Emotes.sad
               }
             });
           },
           text:
-            "Get out of my spot! I need my space, perfect air temperature, all that!"
+            "Get out of my spot! I need my space, perfect air temperature, and wheelie chair!"
         }
       ]
     },
@@ -548,17 +548,15 @@ export function getSchoolScenario(name, character) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 2,
+              points: points + 4,
               response: {
-                dialog: "I'm Icy, nice to meet you.",
+                dialog: `I'm ${character}. Nice to meet you.`,
                 emote: Emotes.happy
               }
             });
           },
           text:
-            "I'm doing pretty good. My name's " +
-            name +
-            ", by the way. What's your name?"
+            `I'm doing pretty good. My name's ${name}, by the way. What's your name?`
         },
         {
           onClick: () => {
@@ -569,12 +567,12 @@ export function getSchoolScenario(name, character) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               response: {
-                dialog: "What? Why? I'm Icy.",
+                dialog: `What?? Why? Also, my name is ${character}.`,
                 emote: Emotes.sad
               }
             });
           },
-          text: "I hate life right now. I'm " + name + " Who the heck are you?"
+          text: `I actually hate life right now. I'm ${name}, by the way.`
         },
         {
           onClick: () => {
@@ -583,15 +581,15 @@ export function getSchoolScenario(name, character) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 4,
+              points: points + 2,
               response: {
-                dialog: "Glad to hear. My name's Icy.",
-                emote: Emotes.happy
+                dialog: `Glad to hear. My name's ${character}.`,
+                emote: Emotes.neutral
               }
             });
           },
           text:
-            "Pretty good. Hey, I'm " + name + ". what's your name, by the way?"
+            `Pretty good. Hey, I'm ${name}. What's your name?`
         },
         {
           onClick: () => {
@@ -603,13 +601,13 @@ export function getSchoolScenario(name, character) {
               points: points + 3,
               response: {
                 dialog:
-                  "Oh, SAME. I have three essays due tomorrow that I haven't started on. And it's Icy.",
+                  "Oh, SAME! I have three essays due tomorrow that I haven't even started on.",
                 emote: Emotes.sad
               }
             });
           },
           text:
-            "Okay, I guess. I'm struggling with some of these assignments right now. What's your name?"
+            `Okay, I guess. I'm struggling with some of these assignments right now. How about you?`
         }
       ]
     },
@@ -630,7 +628,7 @@ export function getSchoolScenario(name, character) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 3,
+              points: points + 2,
               response: {
                 emote: Emotes.neutral,
                 dialog: "Nice to meet you, too."
@@ -638,7 +636,7 @@ export function getSchoolScenario(name, character) {
             });
           },
           text:
-            "Well hey, nice to meet you. I think I'll have a look over my notes before class."
+            "Well hey, it's nice to meet you. I think I'll have a look over my notes before class."
         },
         {
           onClick: () => {
@@ -656,303 +654,8 @@ export function getSchoolScenario(name, character) {
             });
           },
           text:
-            "It's nice to meet you. Do you want to swap info so we can share notes?"
+            "It's nice to meet you. Do you want to swap info so we can share notes if we get behind?"
         },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 2,
-              response: {
-                emote: Emotes.neutral,
-                dialog: "See ya!"
-              }
-            });
-          },
-          text: "Alright, I'm gonna get my stuff now. Talk to you later!"
-        },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 1,
-              gameOver: "That was rude. Try manners next time.",
-              response: {
-                dialog: "You should try to get to know people before burning bridges.",
-                emote: Emotes.sad
-              }
-            });
-          },
-          text: "You know, you're pretty weird."
-        }
-      ]
-    },
-    {
-      dialog: "",
-      emote: null,
-      buttons: []
-    },
-    {
-      dialog:
-        "Narrator: You've had a decent first conversation with them. Now, you have someone who you can talk to again when you go to class!",
-      emote: Emotes.happy,
-      buttons: []
-    }
-  ];
-  return scenario;
-}
-
-export function getParkScenario(name, character) {
-  const shePronoun = character === "Nana" ? "she" : "he";
-  const herPronoun = character === "Nana" ? "her" : "him";
-  const scenario = [
-    {
-      dialog:
-        `Narrator: You've ran into your new boss, ${character} at the park. You are walking opposite ways and ${shePronoun} appears as though ${shePronoun} wants to speak to you. How do you greet ${herPronoun}?`,
-      emote: Emotes.neutral,
-      buttons: []
-    },
-    {
-      dialog: "",
-      emote: Emotes.neutral,
-      buttons: [
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 4,
-              response: {
-                dialog: "I'm doing alright.",
-                emote: Emotes.happy
-              }
-            });
-          },
-          text: "Hi, Mr. Hoss, how are you doing?"
-        },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 1,
-              response: {
-                dialog: "Umm, what?",
-                emote: Emotes.sad
-              }
-            });
-          },
-          text: "Brad! What is up, my dude?"
-        },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 2,
-              response: {
-                dialog: "Very well!",
-                emote: Emotes.neutral
-              }
-            });
-          },
-          text: "Salutations, Mr. Hoss. How do you do?"
-        },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 1,
-              gameOver: "You're not the type I expect to see in the office tomorrow",
-              response: {
-                dialog: "YOU'RE FIRED!!!",
-                emote: Emotes.sad
-              }
-            });
-          },
-          text: "Why are you here? You’re not the type I'd expect to see out in nature!"
-        }
-      ]
-    },
-    {
-      dialog: "",
-      emote: null,
-      buttons: []
-    },
-    {
-      dialog: "How are you today, " + name + "?",
-      emote: Emotes.neutral,
-      buttons: [
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 1,
-              response: {
-                dialog:
-                  "Oh, yeah, so high brow! There's just SO much quality entertainment out there...",
-                emote: Emotes.sad
-              }
-            });
-          },
-          text: "Dude, I’ve been watching TV a lot more."
-        },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 4,
-              response: {
-                dialog: "Pretty good! I've been working on my car!",
-                emote: Emotes.sad
-              }
-            });
-          },
-          text: "Pretty good, actually. How’s your weekend?"
-        },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 1,
-              response: {
-                dialog: "Oh, that's a REAL BUMMER...",
-                emote: Emotes.sad
-              }
-            });
-          },
-          text: "My mom won’t stop nagging at me for not cleaning my room."
-        },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 0,
-              points: points + 2,
-              response: {
-                dialog: "Hmm. That's nice, I guess.",
-                emote: Emotes.neutral
-              }
-            });
-          },
-          text: "Okay."
-        }
-      ]
-    },
-    {
-      dialog: "",
-      emote: null,
-      buttons: []
-    },
-    {
-      dialog:
-        "Well, I've been doing fine. How is that project that I assigned to you going?",
-      emote: Emotes.neutral,
-      buttons: [
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 4,
-              response: {
-                dialog:
-                  "Great! Just remember, it's due Tuesday, so allow plenty of time.",
-                emote: Emotes.neutral
-              }
-            });
-          },
-          text: "I'm on track. It should be done shortly."
-        },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 1,
-              response: {
-                dialog:
-                  "Kid, you'd better clean up your game right now, or next time, you're fired.",
-                emote: Emotes.sad
-              }
-            });
-          },
-          text: "It sucks. You shouldn't have given me it."
-        },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 1,
-              response: {
-                dialog: "Okay, looks like someone needs to get to work, then!",
-                emote: Emotes.neutral
-              }
-            });
-          },
-          text: "I haven't started it yet."
-        },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 1,
-              response: {
-                dialog: "Kid, clean your game up RIGHT NOW!!!",
-                emote: Emotes.sad
-              }
-            });
-          },
-          text: "Come off it!"
-        }
-      ]
-    },
-    {
-      dialog: "",
-      emote: null,
-      buttons: []
-    },
-    {
-      dialog:
-        "How do you close this off smoothly?",
-      emote: Emotes.neutral,
-      buttons: [
         {
           onClick: () => {
             const { gameCounter } = this.state;
@@ -962,71 +665,32 @@ export function getParkScenario(name, character) {
               gameCounter: gameCounter + 1,
               points: points + 3,
               response: {
-                dialog: "See you at the office!",
-                emote: Emotes.neutral
+                emote: Emotes.neutral,
+                dialog: "... See ya!"
               }
             });
           },
-          text: "Alright, well I’d better get on with my walk. Good seeing you!"
+          text: "Alright, I'm gonna get my stuff now. Talk to you later!"
         },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 1,
-              response: {
-                dialog: "See ya!",
-                emote: Emotes.neutral
-              }
-            });
-          },
-          text: "Bye! (walks away)"
-        },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 4,
-              response: {
-                dialog: "See you Monday!",
-                emote: Emotes.happy
-              }
-            });
-          },
-          text:
-            "Okay, I’ll keep that project in mind. Well, I’m gonna take off now. See you Monday!"
-        },
-        {
-          onClick: () => {
-            const { gameCounter } = this.state;
-            const { points } = this.state;
-            this.setState({
-              ...this.state,
-              gameCounter: gameCounter + 1,
-              points: points + 1,
-              gameOver:
-                "He might take that personally. That was not a good idea!",
-              response: {
-                dialog: "Bye, punk! (Well, THAT'S GOING ON MY REPORT...)",
-                emote: Emotes.sad
-              }
-            });
-          },
-          text: "Smell you later!"
-        }
       ]
+    },
+    {
+      dialog: "",
+      emote: null,
+      buttons: []
+    },
+    {
+      dialog:
+        `Narrator: So, you've had a decent first conversation with ${herPronoun}. Now, you have someone who you can talk to again in class!`,
+      emote: Emotes.happy,
+      buttons: []
     }
   ];
   return scenario;
 }
 
-export function getMarketScenario() {
+export function getMarketScenario(name, character) {
+  const shePronoun = character === "Nana" ? "she" : "he";
   const scenario = [
     {
       dialog:
@@ -1192,7 +856,7 @@ export function getMarketScenario() {
     },
     {
       dialog:
-        "Narrator: Okay, looks like she's calming down. Now, you can finish diffusing this situation.",
+        `Narrator: Okay, looks like ${shePronoun}'s calming down. Now, you can finish diffusing this situation.`,
       emote: Emotes.neutral,
       buttons: [
         {
@@ -1272,7 +936,7 @@ export function getMarketScenario() {
     },
     {
       dialog:
-        "I'll just take my business elsewhere. Sorry if I was rude.",
+        "I think I'll just take my business elsewhere. Sorry if I was rude.",
       emote: Emotes.happy,
       buttons: []
     },
@@ -1280,6 +944,303 @@ export function getMarketScenario() {
       dialog: "Narrator: Good job! You've helped diffuse the situation, I hope!",
       emote: Emotes.happy,
       buttons: []
+    }
+  ];
+  return scenario;
+}
+
+export function getParkScenario(name, character) {
+  const shePronoun = character === "Nana" ? "she" : "he";
+  const herPronoun = character === "Nana" ? "her" : "him";
+  const title = character === "Nana" ? "Mrs." : "Mr.";
+  const scenario = [
+    {
+      dialog:
+        `Narrator: You've ran into your new boss, ${character} at the park. You are walking opposite ways and ${shePronoun} appears as though ${shePronoun} wants to speak to you. How do you greet ${herPronoun}?`,
+      emote: Emotes.neutral,
+      buttons: [
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 4,
+              response: {
+                dialog: "I'm doing alright.",
+                emote: Emotes.happy
+              }
+            });
+          },
+          text: `Hi, ${title} Hoss, how are you doing?`
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 2,
+              response: {
+                dialog: "Umm, what?",
+                emote: Emotes.sad
+              }
+            });
+          },
+          text: `${character}! What is up, my dude?`
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 3,
+              response: {
+                dialog: "Very well!",
+                emote: Emotes.neutral
+              }
+            });
+          },
+          text: `Salutations, ${title} Hoss. How do you do?`
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 1,
+              response: {
+                dialog: "What's that supposed to mean?",
+                emote: Emotes.sad
+              }
+            });
+          },
+          text: "Why are you here? You’re not the type I'd expect to see out in nature!"
+        }
+      ]
+    },
+    {
+      dialog: "",
+      emote: null,
+      buttons: []
+    },
+    {
+      dialog: `How are you today, ${name}?`,
+      emote: Emotes.neutral,
+      buttons: [
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 2,
+              response: {
+                dialog:
+                  "So high brow! There's just SO much quality entertainment out there...",
+                emote: Emotes.sad
+              }
+            });
+          },
+          text: "Dude, I’ve been watching TV nonstop."
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 4,
+              response: {
+                dialog: "Pretty good! I've been working on my car!",
+                emote: Emotes.happy
+              }
+            });
+          },
+          text: "Pretty good, actually. How’s your weekend?"
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 1,
+              response: {
+                dialog: "Oh, that's, uh... a real bummer...?",
+                emote: Emotes.sad
+              }
+            });
+          },
+          text: "Not great. My mom won’t stop nagging at me for not cleaning my room."
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 0,
+              points: points + 2,
+              response: {
+                dialog: "Hmm. That's nice, I guess.",
+                emote: Emotes.neutral
+              }
+            });
+          },
+          text: "Okay."
+        }
+      ]
+    },
+    {
+      dialog: "",
+      emote: null,
+      buttons: []
+    },
+    {
+      dialog:
+        "Well, I've been doing fine. How is that project that I assigned to you going?",
+      emote: Emotes.neutral,
+      buttons: [
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 4,
+              response: {
+                dialog:
+                  "Great! Just remember, it's due Tuesday, so allow plenty of time.",
+                emote: Emotes.neutral
+              }
+            });
+          },
+          text: "I'm on track. It should be done shortly."
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 1,
+              gameOver: "It's called a filter. Learn to use it.",
+              response: {
+                dialog: "",
+                emote: Emotes.neutral
+              }
+            });
+          },
+          text: "It sucks. You shouldn't have assigned me it."
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 2,
+              response: {
+                dialog: "Okay... looks like someone needs to get to work, then!",
+                emote: Emotes.neutral
+              }
+            });
+          },
+          text: "I actually I haven't started it yet."
+        }
+      ]
+    },
+    {
+      dialog: "",
+      emote: null,
+      buttons: []
+    },
+    {
+      dialog:
+        "Narrator: So, how do you close this off smoothly?",
+      emote: Emotes.neutral,
+      buttons: [
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 3,
+              response: {
+                dialog: "See you at the office!",
+                emote: Emotes.happy
+              }
+            });
+          },
+          text: "Alright, well I’d better get on with my walk. Good seeing you!"
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 2,
+              response: {
+                dialog: "See ya!",
+                emote: Emotes.neutral
+              }
+            });
+          },
+          text: "Bye! (walks away)"
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 4,
+              response: {
+                dialog: "See you Monday!",
+                emote: Emotes.happy
+              }
+            });
+          },
+          text:
+            "Okay, I’ll keep that project in mind. Well, I’m gonna take off now. See you Monday!"
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 1,
+              gameOver:
+                "Seriously, guy. Use a filter.",
+              response: {
+                dialog: "",
+                emote: Emotes.sad
+              }
+            });
+          },
+          text: "Smell you later!"
+        }
+      ]
     }
   ];
   return scenario;
