@@ -1089,7 +1089,7 @@ export function getMarketScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 0,
+              points: points + 1,
               gameOver:
                 "Okay, you avoided the situation. That's decent from your perspective, but not helpful to the community.",
               response: {
