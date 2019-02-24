@@ -1088,7 +1088,7 @@ export function getParkScenario(name, character) {
             const { points } = this.state;
             this.setState({
               ...this.state,
-              gameCounter: gameCounter + 0,
+              gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
                 dialog: "Hmm. That's nice, I guess.",
