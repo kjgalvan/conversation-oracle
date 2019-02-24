@@ -90,7 +90,7 @@ class Game extends React.Component {
                 </Row>
                 <Row>
                   <Col>
-                    <Display className="Display" character={this.state.character} emote={this.state.scenario[this.state.gameCounter].emote} />
+                    <Display className="d-flex justify-content-center Display Img" character={this.state.character} emote={this.state.scenario[this.state.gameCounter].emote} />
                   </Col>
                 </Row>
                 <Row>
@@ -115,16 +115,12 @@ class Game extends React.Component {
           return (
             <React.Fragment>
               <p>I want to talk to...</p>
-              <Row>
+              <Row className="DoubleDisplay">
                 <Col>
-                  <Display character={Characters.nana} emote={Emotes.happy} />
+                  <Display className="d-flex justify-content-center Img" character={Characters.nana} emote={Emotes.happy} />
                 </Col>
                 <Col>
-<<<<<<<
-                  <Display character={Characters.popo} emote={Emotes.happy} />
-=======
-                  <Display className="d-flex justify-content-center Display Img" character={this.state.character} emote={this.state.scenario[this.state.gameCounter].emote} />
->>>>>>>
+                  <Display className="d-flex justify-content-center Img" character={Characters.popo} emote={Emotes.happy} />
                 </Col>
               </Row>
               <Row>
