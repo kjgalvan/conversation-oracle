@@ -53,6 +53,12 @@ class Game extends React.Component {
     this.props.setName(this.state.tempName);
   }
 
+  onKeyPress = (event) => {
+    if (event.charCode === 13) {
+      this.props.setName(event.target.value);
+    }
+  }
+
   getGameContent = () => {
     if (this.props.name) {
       if (this.props.scenario) {
@@ -100,7 +106,7 @@ class Game extends React.Component {
         <Row>
           <Col className="Dialog solo">
             <Dialog text="My name is..." />
-            <input autoFocus className="form-control" onBlur={this.setTempName} />
+            <input autoFocus className="form-control" onBlur={this.setTempName} onKeyPress={this.onKeyPress} />
             <Button className="Submit" onClick={this.onSubmit}>Submit</Button>
           </Col>
         </Row>
