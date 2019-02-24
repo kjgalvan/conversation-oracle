@@ -5,7 +5,7 @@ export function getGroceryScenario(name, character) {
     // buttons
     {
       dialog:
-        "You're at the local grocery store when you spot an old acquaintance.",
+        `You're at the local grocery store when you spot an old acquaintance, ${character}.`,
       emote: Emotes.neutral,
       buttons: []
     },
@@ -29,7 +29,7 @@ export function getGroceryScenario(name, character) {
             const { points } = this.state;
             this.setState({
               ...this.state,
-              gameCounter: gameCounter + 3,
+              gameCounter: gameCounter + 1,
               points: points + 3,
               response: {
                 dialog: "Good!",
@@ -37,7 +37,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "Good and you?"
+          text: `Good and you?`
         },
         {
           onClick: () => {
@@ -53,7 +53,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "I have been doing excellent, how about you?"
+          text: `I have been doing excellent, how about you, ${character}?`
         },
         {
           onClick: () => {
@@ -112,7 +112,7 @@ export function getGroceryScenario(name, character) {
               }
             });
           },
-          text: "I’m glad to hear you’re doing fine! "
+          text: "I’m glad to hear you’re doing fine!"
         },
         {
           onClick: () => {
@@ -173,7 +173,7 @@ export function getGroceryScenario(name, character) {
       buttons: []
     },
     {
-      dialog: "Narrator: At this point you notice their shopping cart...",
+      dialog: `Narrator: At this point you notice ${character}'s shopping cart...`,
       emote: Emotes.neutral,
       buttons: [
         {
@@ -202,12 +202,12 @@ export function getGroceryScenario(name, character) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "A man of what? I just like Mountain Dew.",
+                dialog: "What? I just like Mountain Dew.",
                 emote: Emotes.neutral
               }
             });
           },
-          text: "Ah Mountain Dew, I see you’re a man of culture. "
+          text: "Ah Mountain Dew, I see you’re quite cultured. "
         },
         {
           onClick: () => {
@@ -358,7 +358,7 @@ export function getGroceryScenario(name, character) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               response: {
-                dialog: "(They watch you walk away)",
+                dialog: `(${character} watches as you walk away)`,
                 emote: Emotes.sad
               }
             });
