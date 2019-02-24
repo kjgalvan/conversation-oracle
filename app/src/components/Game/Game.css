@@ -1,18 +1,18 @@
-html, body{
+html, body {
     height:100%;
 }
-body{
+
+body {
     color: #7A747F;
     margin: 0 0 0 0;
     background-image: linear-gradient(to bottom right, #FEEAFA 50%, #CBC0D3 50%);
 }
+
 p {
     font-size: .9rem;
 }
 
-.Score{
-    /*border: solid 2px;
-    border-color: orange;*/
+.Score {
     padding-top: 1vh;
     min-width: .3vh;
     min-height: .3vh;
@@ -20,7 +20,8 @@ p {
     font-size: 3vh;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.Game{
+
+.Game {
     display: flex;
     align-content: center;
     flex-wrap: wrap;
@@ -41,14 +42,10 @@ p {
     align-items: center;
     justify-content: center;
 }
-.Display{
+.Display {
     border-left-style: double;
     border-left-color: white;
     border-left-width: 15px;
-    /*S
-    border-bottom-style: solid ;
-    border-bottom-color: white;
-    border-bottom-width: 4px;*/
 
     border-top-style: double;
     border-top-color: white;
@@ -57,7 +54,7 @@ p {
     border-right-style: double;
     border-right-color: white;
     border-right-width: 15px;
-   
+
     border-radius: 5vh 5vh 0vh 0vh;
     background-color: white;
 
@@ -66,17 +63,16 @@ p {
     -moz-background-clip: border;     /* Firefox 3.6 */
     -webkit-background-clip: border;  /* Safari 4? Chrome 6? */
     background-clip: border-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
-				
+
     -moz-background-clip: padding;     /* Firefox 3.6 */
     -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
     background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
-				
+
     -moz-background-clip: content;     /* Firefox 3.6 */
     -webkit-background-clip: content;  /* Safari 4? Chrome 6? */
     background-clip: content-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
-  
-    align-items: center;
 
+    align-items: center;
 }
 
 .Img > img {
@@ -89,10 +85,6 @@ p {
     border-left-style: double;
     border-left-color: white;
     border-left-width: 15px;
-    /*S
-    border-bottom-style: solid ;
-    border-bottom-color: white;
-    border-bottom-width: 4px;*/
 
     border-top-style: double;
     border-top-color: white;
@@ -101,34 +93,31 @@ p {
     border-right-style: double;
     border-right-color: white;
     border-right-width: 15px;
-   
+
     border-radius: 5vh 5vh 0vh 0vh;
     background-color: white;
-    
+
     margin-left: .2vh;
     margin-right: .2vh;
 
-
-    /* Removes the color behind the border */
     -moz-background-clip: border;     /* Firefox 3.6 */
     -webkit-background-clip: border;  /* Safari 4? Chrome 6? */
     background-clip: border-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
-				
+
     -moz-background-clip: padding;     /* Firefox 3.6 */
     -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
     background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
-				
+
     -moz-background-clip: content;     /* Firefox 3.6 */
     -webkit-background-clip: content;  /* Safari 4? Chrome 6? */
     background-clip: content-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
-
 }
 
 .DualButtons {
     width: 100%;
 }
 
-.Dialog{
+.Dialog {
     margin:auto;
     border: solid 2px;
     border-color: #CBC0D3;
@@ -139,17 +128,17 @@ p {
     width: 100%;
 }
 
-.Dialog.solo{
+.Dialog.solo {
     margin: 2vh;
     padding-bottom: 2vh;
     width: 60%;
 }
 
-.Dialog * p{
+.Dialog * p {
     margin-top: 1.2vh;
 }
 
-.Submit.ButtonOverride{
+.Submit.ButtonOverride {
     height: auto;
     margin-top: 1.2vh;
     margin-left: 1.2vh;
@@ -157,7 +146,7 @@ p {
     float: right;
 }
 
-.Game > button{
+.Game > button {
     justify-content: space-evenly;
 }
 
@@ -166,7 +155,7 @@ p {
     display: flex;
 }
 
-.ButtonOverride{
+.ButtonOverride {
     font-size: .9rem;
     height: 100%;
     color: #FEEAFA;
@@ -174,7 +163,7 @@ p {
     background-color: #948C9A;
 }
 
-.ButtonOverride:hover{
+.ButtonOverride:hover {
     color: #7A747F;
     border: 2px solid rgb(252, 215, 244);
     background-color: rgb(252, 215, 244);

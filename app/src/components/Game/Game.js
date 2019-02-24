@@ -69,10 +69,20 @@ class Game extends React.Component {
             <Col>
               <Row className="DoubleDisplay">
                 <Col>
-                  <Display key={this.state.character} className="d-flex justify-content-center Img" character={Characters.nana} emote={Emotes.happy} />
+                  <Display
+                    key={this.state.character}
+                    className="d-flex justify-content-center Img"
+                    character={Characters.nana}
+                    emote={Emotes.happy}
+                  />
                 </Col>
                 <Col>
-                  <Display key={this.state.character} className="d-flex justify-content-center Img" character={Characters.popo} emote={Emotes.happy} />
+                  <Display
+                    key={this.state.character}
+                    className="d-flex justify-content-center Img"
+                    character={Characters.popo}
+                    emote={Emotes.happy}
+                  />
                 </Col>
               </Row>
               <Row>
