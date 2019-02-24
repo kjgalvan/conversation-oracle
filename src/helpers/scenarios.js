@@ -503,7 +503,7 @@ export function getSchoolScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               response: {
-                dialog: "...",
+                dialog: "I normally sit here!!!",
                 emote: Emotes.sad
               }
             });
@@ -682,7 +682,7 @@ export function getSchoolScenario(name) {
               points: points + 1,
               gameOver: "That was rude. Try manners next time.",
               response: {
-                dialog: "...",
+                dialog: "Really? Why would you say that? Later, normie.",
                 emote: Emotes.sad
               }
             });
@@ -803,12 +803,13 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               response: {
-                dialog: "...",
+                dialog:
+                  "Oh, yeah, so high brow! There's just SO much quality entertainment out there...",
                 emote: Emotes.sad
               }
             });
           },
-          text: "Dude, I’ve been watching Family Guy a lot more."
+          text: "Dude, I’ve been watching TV a lot more."
         },
         {
           onClick: () => {
@@ -819,7 +820,7 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 4,
               response: {
-                dialog: "...",
+                dialog: "Pretty good! I've been working on my car!",
                 emote: Emotes.sad
               }
             });
@@ -835,7 +836,7 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               response: {
-                dialog: "...",
+                dialog: "Oh, that's a REAL BUMMER...",
                 emote: Emotes.sad
               }
             });
@@ -851,7 +852,7 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 0,
               points: points + 2,
               response: {
-                dialog: "...",
+                dialog: "Hmm. That's nice, I guess.",
                 emote: Emotes.neutral
               }
             });
@@ -957,7 +958,7 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 3,
               response: {
-                dialog: "...",
+                dialog: "See you at the office!",
                 emote: Emotes.neutral
               }
             });
@@ -973,7 +974,7 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 1,
               response: {
-                dialog: "...",
+                dialog: "See ya!",
                 emote: Emotes.neutral
               }
             });
@@ -989,7 +990,7 @@ export function getParkScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 4,
               response: {
-                dialog: "...",
+                dialog: "See you Monday!",
                 emote: Emotes.happy
               }
             });
@@ -1008,7 +1009,7 @@ export function getParkScenario(name) {
               gameOver:
                 "He might take that personally. That was not a good idea!",
               response: {
-                dialog: "...",
+                dialog: "Bye, punk! (Well, THAT'S GOING ON MY REPORT...)",
                 emote: Emotes.sad
               }
             });
@@ -1093,7 +1094,7 @@ export function getMarketScenario(name) {
               gameOver:
                 "Okay, you avoided the situation. That's decent from your perspective, but not helpful to the community.",
               response: {
-                dialog: "...",
+                dialog: "",
                 emote: Emotes.sad
               }
             });
@@ -1199,7 +1200,7 @@ export function getMarketScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "...",
+                dialog: "Bye!",
                 emote: Emotes.sad
               }
             });
@@ -1217,7 +1218,7 @@ export function getMarketScenario(name) {
               gameOver:
                 "GAME OVER, MAN! GAME OVER!!! Why did you do that? The situation was calming down, but what you said made it worse than ever? Next time, be more sensitive.",
               response: {
-                dialog: "...",
+                dialog: "WELL EXCUSE ME!",
                 emote: Emotes.sad
               }
             });
@@ -1233,7 +1234,7 @@ export function getMarketScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 3,
               response: {
-                dialog: "...",
+                dialog: "Great... Bye!",
                 emote: Emotes.neutral
               }
             });
