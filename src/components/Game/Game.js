@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Button } from 'reactstrap';
 import './Game.css';
 import Dialog from '../Dialog';
 import Display from '../Display';
 import Score from '../Score';
 import Buttons from '../Buttons';
-import { Scenario } from '../../helpers/enums';
+import { Scenario, Emotes, Characters } from '../../helpers/enums';
 import {
   getGroceryScenario,
 } from '../../helpers/scenarios';
@@ -20,6 +20,7 @@ class Game extends React.Component {
       gameOver: null,
       gameCounter: 0,
       scenario: null,
+      character: "",
       next: [{ onClick: this.nextSlide, text: "Next" }]
     }
 
@@ -41,6 +42,13 @@ class Game extends React.Component {
     })
   }
 
+  setCharacter = (character) => {
+    this.setState({
+      ...this.state,
+      character
+    })
+  }
+
   getScenario = (scenario) => {
     switch(scenario) {
       case Scenario.grocery: {
@@ -57,28 +65,57 @@ class Game extends React.Component {
 
   render() {
     if (this.state.scenario && this.props.name) {
-      return (
-        <Container className="Game">
-          <Row>
-            <Col className="Score" md={{size: 3, offset: 9}} >
-              <Score points="97" />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Display className="Display" character={this.props.character} emote={this.state.scenario[this.state.gameCounter].emote} />
-            </Col>
-          </Row>
-          <Row>
-            <Col className="Dialog">
-              <Dialog text={this.state.scenario ? this.state.scenario[this.state.gameCounter].dialog : "Please choose a scenario."} />
-            </Col>
-          </Row>
-          <Row>
-            <Buttons buttons={this.state.next} />
-          </Row>
-        </Container>
-      );
+      if (this.state.character) {
+        if (this.state.scenario[this.state.gameCounter]) {
+          return (
+            <Container className="Game">
+              <Row>
+                <Col className="Score" md={{size: 3, offset: 9}} >
+                  <Score points="97" />
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Display className="Display" character={this.state.character} emote={this.state.scenario[this.state.gameCounter].emote} />
+                </Col>
+              </Row>
+              <Row>
+                <Col className="Dialog">
+                  <Dialog text={this.state.scenario ? this.state.scenario[this.state.gameCounter].dialog : "Please choose a scenario."} />
+                </Col>
+              </Row>
+              <Row>
+                <Buttons buttons={this.state.next} />
+              </Row>
+            </Container>
+          );
+        } else {
+          return <h1>Scenario Complete!</h1>
+        }
+      }
+      else {
+        return (
+          <Container className="Game">
+            <Row><p>I want to talk to...</p></Row>
+            <Row>
+              <Col>
+                <Display character={Characters.nana} emote={Emotes.happy} />
+              </Col>
+              <Col>
+                <Display character={Characters.popo} emote={Emotes.happy} />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Button onClick={() => { this.setCharacter(Characters.nana); }}>Nana</Button>
+              </Col>
+              <Col>
+                <Button onClick={() => { this.setCharacter(Characters.popo); }}>Popo</Button>
+              </Col>
+            </Row>
+          </Container>
+        );
+      }
     }
     else return null;
   }
