@@ -107,7 +107,7 @@ class Game extends React.Component {
             return (
               <React.Fragment>
                 <h1>Scenario Complete!</h1>
-                <p>Your final score was </p><b>{this.state.points}</b>
+                <p>Your final score was <b>{this.state.points}</b>.</p>
               </React.Fragment>
             );
           }
