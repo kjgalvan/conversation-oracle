@@ -3,7 +3,7 @@ html, body{
 }
 body{
     margin: 0 0 0 0;
-    background-image: linear-gradient(to bottom right, #A9B2AC 50%, #717C79 50%);
+    background-image: linear-gradient(to bottom right, #B3C7EF 50%, #A7BEEA 50%);
     
 }
 
@@ -21,9 +21,9 @@ body{
     margin:auto;
     padding-bottom: 2vh;
     border: solid 2px;
-    border-color:  #575761;
+    border-color:  #6699cc;
     border-radius: 5vh 5vh 5vh 5vh;
-    background-color:  #9DA5A0;
+    background-color:  #9BB8E2;
     min-width: .3vh;
     min-height: .3vh;
     max-width: 100vh;
@@ -129,7 +129,7 @@ body{
     border: solid 2px;
     border-color: #A1AFA0;
     border-radius: 3vh 3vh 3vh 3vh;
-    background-color: #CBD4C2;
+    background-color: #B3C7EF;
     min-width: .3vh;
     min-height: .3vh;
     width: 99vh;
@@ -167,7 +167,7 @@ body{
 
 .ButtonOverride{
     color: #26292f;
-    background-color: #A1AFA0;
+    background-color: #BCC7EA;
     border-color: #798478;
 }
 

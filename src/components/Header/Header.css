@@ -26,7 +26,7 @@ div.conversation{
     color: #898980;
     border-bottom-style: dotted;
     border-bottom-width: 4px;
-    border-bottom-color: #575761;
+    border-bottom-color: #16425B;
 }
 
 div.oracle{
@@ -35,24 +35,24 @@ div.oracle{
     color: #898980;
     border-bottom-style: dotted;
     border-bottom-width: 4px;
-    border-bottom-color: #575761;
+    border-bottom-color: #16425B;
 }
 
 div.letterC{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', serif;
-    color: #575761;
+    color: #16425B;
     padding-left: 2.2vh;
     padding-right: 2.2vh;
     font-size: 5vh;
-    border: 4px double #575761;
+    border: 4px double #16425B;
     border-radius: 5vh;
 }
 div.letterO{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', serif;
-    color:#575761;
+    color:#16425B;
     padding-left: 2.2vh;
     padding-right: 2.2vh;
     font-size: 5vh;
-    border: 4px double #575761;
+    border: 4px double #16425B;
     border-radius: 5vh;
 }
