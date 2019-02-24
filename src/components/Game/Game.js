@@ -66,7 +66,7 @@ class Game extends React.Component {
           return <Scenario name={this.props.name} character={this.state.character} scenario={this.props.scenario} />;
         } else {
           return (
-            <React.Fragment>
+            <Col>
               <Row className="DoubleDisplay">
                 <Col>
                   <Display key={this.state.character} className="d-flex justify-content-center Img" character={Characters.nana} emote={Emotes.happy} />
@@ -88,7 +88,7 @@ class Game extends React.Component {
                   <Button className="ButtonOverride DualButtons" onClick={() => { this.setCharacter(Characters.popo); }}>Popo</Button>
                 </Col>
               </Row>
-            </React.Fragment>
+            </Col>
           );
         }
       } else {
