@@ -985,3 +985,253 @@ export function getParkScenario(name) {
   ];
   return scenario;
 }
+
+export function getMarketScenario(name) {
+  var scenario = [
+    {
+      dialog:
+        "Narrator: You are at the flea market when you see an old person yelling at the shopkeeper.",
+      emote: Emotes.neutral,
+      buttons: []
+    },
+    {
+      dialog:
+      "WHY ARE THESE FIVE DOLLARS A PIECE! THEY USED TO BE THREE!!!",
+      emote: Emotes.sad,
+      buttons: [
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 2,
+              response: {
+                dialog: "BUT IT USED TO BE THREE!!!",
+                emote: Emotes.sad
+              }
+            });
+          },
+          text: "It’s the shopkeeper’s decision. "
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 0,
+              response: {
+                dialog: "Excuse me, youngin'!!! THIS IS BETWEEN ME AND HER!!!",
+                emote: Emotes.sad
+              }
+            });
+          },
+          text: "SHUT UP! Stop your whining!"
+        },
+
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 4,
+              response: {
+                dialog: "SHE MADE HER REASONABLE PRICES ABHORRENT!!!",
+                emote: Emotes.sad
+              }
+            });
+          },
+          text:
+            "Excuse me, but what’s going on here?"
+        },
+        {
+          onClick: () => {
+            const { gameCounter } = this.state;
+            const { points } = this.state;
+            this.setState({
+              ...this.state,
+              gameCounter: gameCounter + 1,
+              points: points + 0,
+              gameOver:
+                "Okay, you avoided the situation. That's decent from your perspective, but not helpful to the community.",
+              response: {
+                emote: Emotes.sad
+              }
+            });
+          },
+          text: "(Walk by)"
+        }
+        {
+          dialog: "",
+          emote: null,
+          buttons: []
+        },
+        {
+          dialog:
+          emote: Emotes.sad,
+          buttons: [
+            {
+              onClick: () => {
+                const { gameCounter } = this.state;
+                const { points } = this.state;
+                this.setState({
+                  ...this.state,
+                  gameCounter: gameCounter + 1,
+                  points: points + 3,
+                  response: {
+                    dialog: "AHH, you’re right. Well, forget about her. I’ll find someplace else!",
+                    emote: Emotes.neutral
+                  }
+                });
+              },
+              text: "I know that things like this can be upsetting, but it’s not her responsibility to not raise her prices."
+            },
+            {
+              onClick: () => {
+                const { gameCounter } = this.state;
+                const { points } = this.state;
+                this.setState({
+                  ...this.state,
+                  gameCounter: gameCounter + 1,
+                  points: points + 1,
+                  response: {
+                    dialog: "Screw someplace else! This WAS affordable!",
+                    emote: Emotes.sad
+                  }
+                });
+              },
+              text: "Why don’t you go shop for these somewhere else?"
+            },
+            {
+              onClick: () => {
+                const { gameCounter } = this.state;
+                const { points } = this.state;
+                this.setState({
+                  ...this.state,
+                  gameCounter: gameCounter + 1,
+                  points: points + 4,
+                  response: {
+                    dialog: "AHH, you’re right. Well, forget about her. I’ll find someplace else!",
+                    emote: Emotes.neutral
+                  }
+                });
+              },
+              text:
+                "I’m sorry about your troubles."
+            },
+            {
+              onClick: () => {
+                const { gameCounter } = this.state;
+                const { points } = this.state;
+                this.setState({
+                  ...this.state,
+                  gameCounter: gameCounter + 1,
+                  points: points + 0,
+                  response: {
+                    dialog: "NO, because of HER CHOICE, these prices are abhorrent.",
+                    emote: Emotes.sad
+                  }
+                });
+              },
+              text: "SHUT IT!!! IT’S HER CHOICE"
+            }
+            {
+              dialog: "",
+              emote: null,
+              buttons: []
+            },
+            {
+              dialog:
+              "Narrator: Okay, looks like she's calming down. Now, you can finish diffusing this.",
+              emote: Emotes.neutral,
+              buttons: [
+                {
+                  onClick: () => {
+                    const { gameCounter } = this.state;
+                    const { points } = this.state;
+                    this.setState({
+                      ...this.state,
+                      gameCounter: gameCounter + 1,
+                      points: points + 1,
+                      response: {
+                        emote: Emotes.sad,
+                      }
+                    });
+                  },
+                  text: "Okay, well you two play nice!"
+                },
+                {
+                  onClick: () => {
+                    const { gameCounter } = this.state;
+                    const { points } = this.state;
+                    this.setState({
+                      ...this.state,
+                      gameCounter: gameCounter + 1,
+                      points: points + 0,
+                      gameOver: "GAME OVER, MAN! GAME OVER!!! Why did you do that? The situation was calming down, but what you said made it worse than ever? Next time, be more sensitive."
+                      response: {
+                        emote: Emotes.sad
+                      }
+                    });
+                  },
+                  text: "WOULD YOU JUST SHUT UP!!!???"
+                },
+                {
+                  onClick: () => {
+                    const { gameCounter } = this.state;
+                    const { points } = this.state;
+                    this.setState({
+                      ...this.state,
+                      gameCounter: gameCounter + 1,
+                      points: points + 3,
+                      response: {
+                        emote: Emotes.neutral
+                      }
+                    });
+                  },
+                  text:
+                    "Okay, well I’m going to leave. Hopefully, I’ve helped to diffuse this."
+                },
+                {
+                  onClick: () => {
+                    const { gameCounter } = this.state;
+                    const { points } = this.state;
+                    this.setState({
+                      ...this.state,
+                      gameCounter: gameCounter + 1,
+                      points: points + 0,
+                      response: {
+                        dialog: "Thank you, sweetie! I think that I let things get out of hand.",
+                        emote: Emotes.sad
+                      }
+                    });
+                  },
+                  text: "I’m sorry that things transpired like this.",
+                }
+              }
+              {
+                dialog: "",
+                emote: null,
+                buttons: []
+              },
+              {
+                dialog: "Okay sweetie, I think that you've helped me to get things in check. Thank you!",
+                emote: Emotes.happy,
+                buttons: []
+              },  
+              {
+                dialog: "Narrator: Good job! You helped to diffuse the situation!",
+                emote: Emotes.happy,
+                buttons: []
+              }
+          }
+      ]
+    }
+  ];
+return scenario;
+}
