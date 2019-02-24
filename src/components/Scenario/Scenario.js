@@ -58,7 +58,7 @@ class Game extends React.Component {
       case Scenario.grocery: {
         return {
           array: this.getGroceryScenario(this.props.name, this.props.character),
-          total: 20
+          total: 15
         };
       }
       case Scenario.school: {
@@ -138,7 +138,16 @@ class Game extends React.Component {
           <Row>
             <Col>
               <h1>Scenario Complete!</h1>
-              <p>Your final score was <b>{(Number.parseFloat((this.state.points / this.state.total) * 100).toFixed(0))}%</b>.</p>
+              <p>
+                Your final score was{" "}
+                <b>
+                  {Number.parseFloat(
+                    (this.state.points / this.state.total) * 100
+                  ).toFixed(0)}
+                  %
+                </b>
+                .
+              </p>
             </Col>
           </Row>
         );

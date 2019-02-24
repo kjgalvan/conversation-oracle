@@ -548,7 +548,7 @@ export function getSchoolScenario(name) {
               gameCounter: gameCounter + 1,
               points: points + 2,
               response: {
-                dialog: "Ah, nice. And it's Icy.",
+                dialog: "Ah, nice. And it's icy.",
                 emote: Emotes.happy
               }
             });
@@ -1135,7 +1135,7 @@ export function getMarketScenario(name) {
             this.setState({
               ...this.state,
               gameCounter: gameCounter + 1,
-              points: points + 1,
+              points: points + 2,
               response: {
                 dialog: "Screw someplace else! This WAS affordable!",
                 emote: Emotes.sad
