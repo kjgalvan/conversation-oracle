@@ -1,6 +1,8 @@
 # Conversation Oracle
 ### Coding Cougs 2019
 
+A mobile-friendly web game that teaches gamers how to have conversations.
+
 [Live Demo](https://skillful-coast-232707.firebaseapp.com)
 
 #### Brought to you by the Tech Gods, Insomnia, and Wishful Thinking
