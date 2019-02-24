@@ -82,10 +82,10 @@ class Game extends React.Component {
               </Row>
               <Row style={{ width: "100%" }}>
                 <Col className="Buttons">
-                  <Button className="ButtonOverride" autoFocus onClick={() => { this.setCharacter(Characters.nana); }}>Nana</Button>
+                  <Button className="ButtonOverride DualButtons" autoFocus onClick={() => { this.setCharacter(Characters.nana); }}>Nana</Button>
                 </Col>
                 <Col className="Buttons">
-                  <Button className="ButtonOverride" onClick={() => { this.setCharacter(Characters.popo); }}>Popo</Button>
+                  <Button className="ButtonOverride DualButtons" onClick={() => { this.setCharacter(Characters.popo); }}>Popo</Button>
                 </Col>
               </Row>
             </React.Fragment>

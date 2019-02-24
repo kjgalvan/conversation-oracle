@@ -18,9 +18,8 @@ body{
     display: flex;
     align-content: center;
     flex-wrap: wrap;
-    
-
     margin:auto;
+    padding-bottom: 2vh;
     border: solid 2px;
     border-color:  #575761;
     border-radius: 5vh 5vh 5vh 5vh;
@@ -121,6 +120,9 @@ body{
 
 }
 
+.DualButtons {
+    width: 100%;
+}
 
 .Dialog{
     margin:auto;
@@ -130,11 +132,12 @@ body{
     background-color: #CBD4C2;
     min-width: .3vh;
     min-height: .3vh;
-    width: 100vh;
+    width: 99vh;
 }
 
 .Dialog.solo{
     margin: 2vh;
+    padding-bottom: 2vh;
     width: 80vh;
 }
 
@@ -142,12 +145,10 @@ body{
     margin-top: 1.2vh;
 }
 
-div.Dialog.col{
-    width: 50%;
-}
-
 .Submit{
-    margin: 1.2vh;
+    margin-top: 1.2vh;
+    margin-left: 1.2vh;
+    margin-right: 1.2vh;
     float: right;
 }
 

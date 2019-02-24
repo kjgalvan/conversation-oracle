@@ -137,18 +137,22 @@ class Game extends React.Component {
       } else {
         return (
           <Row>
-            <Col>
-              <h1>Scenario Complete!</h1>
-              <p>
-                Your final score was{" "}
-                <b>
-                  {Number.parseFloat(
-                    (this.state.points / this.state.total) * 100
-                  ).toFixed(0)}
-                  %
-                </b>
-                .
-              </p>
+            <Col className="Buttons">
+              <Row>
+                <h1>Scenario Complete!</h1>
+              </Row>
+              <Row>
+                <p>
+                  Your final score was{" "}
+                  <b>
+                    {Number.parseFloat(
+                      (this.state.points / this.state.total) * 100
+                    ).toFixed(0)}
+                    %
+                  </b>
+                  .
+                </p>
+              </Row>
             </Col>
           </Row>
         );
