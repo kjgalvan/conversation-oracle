@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col, Button, Input } from 'reactstrap';
 import './Game.css';
 import Dialog from '../Dialog';
 import Display from '../Display';
@@ -21,17 +21,20 @@ class Game extends React.Component {
       gameCounter: 0,
       scenario: null,
       character: "",
-      next: [{ onClick: this.nextSlide, text: "Next" }]
+      next: [{ onClick: this.nextSlide, text: "Next" }],
+      tempName: "",
     }
 
     this.getGroceryScenario = getGroceryScenario.bind(this);
   }
 
   componentDidMount() {
-    this.setState({
-      ...this.state,
-      scenario: this.getScenario(this.props.scenario)
-    });
+    if (this.props.scenario) {
+      this.setState({
+        ...this.state,
+        scenario: this.getScenario(this.props.scenario)
+      });
+    }
   }
 
   nextSlide = () => {
@@ -56,47 +59,58 @@ class Game extends React.Component {
       }
 
       case Scenario.school: {
-        // Return school scenario array
-        break;
+        return this.getGroceryScenario(this.props.name);
       }
       default: break;
     }
   }
 
+  setTempName = (event) => {
+    this.setState({
+      ...this.state,
+      tempName: event.target.value
+    });
+  }
+
+  onSubmit = () => {
+    this.props.setName(this.state.tempName);
+  }
+
   render() {
-    if (this.state.scenario && this.props.name) {
+    if (this.props.name) {
       if (this.state.character) {
-        if (this.state.scenario[this.state.gameCounter]) {
-          return (
-            <Container className="Game">
-              <Row>
-                <Col className="Score" md={{size: 3, offset: 9}} >
-                  <Score points={this.state.points} />
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Display className="Display" character={this.state.character} emote={this.state.scenario[this.state.gameCounter].emote} />
-                </Col>
-              </Row>
-              <Row>
-                <Col className="Dialog">
-                  <Dialog text={this.state.scenario ? this.state.scenario[this.state.gameCounter].dialog : "Please choose a scenario."} />
-                </Col>
-              </Row>
-              <Row>
-                <Buttons buttons={this.state.next} />
-              </Row>
-            </Container>
-          );
-        } else {
-          return <h1>Scenario Complete!</h1>
-        }
-      }
-      else {
+        // if (this.state.scenario) {
+          if (this.state.scenario[this.state.gameCounter]) {
+            return (
+              <Container className="Game">
+                <Row>
+                  <Col className="Score" md={{size: 3, offset: 9}} >
+                    <Score points={this.state.points} />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <Display className="Display" character={this.state.character} emote={this.state.scenario[this.state.gameCounter].emote} />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="Dialog">
+                    <Dialog text={this.state.scenario ? this.state.scenario[this.state.gameCounter].dialog : "Please choose a scenario."} />
+                  </Col>
+                </Row>
+                <Row>
+                  <Buttons buttons={this.state.next} />
+                </Row>
+              </Container>
+            );
+          } else {
+            return <h1>Scenario Complete!</h1>
+          }
+        // } else { return <p>Error... Not quite sure how you got here...</p> }
+      } else {
         return (
           <Container className="Game">
-            <Row><p>I want to talk to...</p></Row>
+            <Row><Col><p>I want to talk to...</p></Col></Row>
             <Row>
               <Col>
                 <Display character={Characters.nana} emote={Emotes.happy} />
@@ -116,8 +130,22 @@ class Game extends React.Component {
           </Container>
         );
       }
+    } else {
+      return (
+        <Container>
+          <Row>
+            <Col>My name is...
+              <Input onBlur={this.setTempName} />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Button className="Submit" onClick={this.onSubmit}>Submit</Button>
+            </Col>
+          </Row>
+        </Container>
+      );
     }
-    else return null;
   }
 }
 

@@ -63,3 +63,7 @@
     min-width: .3vh;
     min-height: .3vh;
 }
+.Submit{
+    margin-top: 5px;
+    float: right;
+}
