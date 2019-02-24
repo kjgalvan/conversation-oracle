@@ -79,7 +79,7 @@ class Game extends React.Component {
   render() {
     if (this.props.name) {
       if (this.state.character) {
-        // if (this.state.scenario) {
+        if (this.state.scenario) {
           if (this.state.scenario[this.state.gameCounter]) {
             return (
               <Container className="Game">
@@ -106,7 +106,7 @@ class Game extends React.Component {
           } else {
             return <h1>Scenario Complete!</h1>
           }
-        // } else { return <p>Error... Not quite sure how you got here...</p> }
+        } else { return <p>Error... Not quite sure how you got here...</p> }
       } else {
         return (
           <Container className="Game">
