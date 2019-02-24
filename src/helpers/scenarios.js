@@ -265,5 +265,291 @@ export function getGroceryScenario(name) {
       }
     ]
 
-    return scenario;
-  }
+  return scenario;
+}
+export function getSchoolScenario(name) {
+  var scenario = [
+    // buttons
+    {
+      dialog:
+        "Narrator: You are at school, sitting next to a girl who you don't know, five minutes before class starts",
+      emote: Emotes.neutral,
+      buttons: []
+    },
+    {
+      dialog: "You want to start a conversation with her.",
+      emote: Emotes.neutral,
+      buttons: [
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Hi, how's it going?"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Hey."
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "What are you doing here?"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text:
+            "Get out of my spot! I need my space, perfect air temperature, all that!"
+        }
+      ]
+    },
+    {
+      dialog: "",
+      emote: null,
+      buttons: []
+    },
+    {
+      dialog: "How are you doing today?",
+      emote: Emotes.happy,
+      buttons: [
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text:
+            "I'm doing pretty good. My name's " +
+            this.props.textWhat +
+            ", by the way. What's your name?"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text:
+            "I hate life right now. I'm " +
+            this.props.text +
+            " Who the heck are you?"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text:
+            "Pretty good. Hey, I'm " +
+            this.props.text +
+            " what's your name, by the way?"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text:
+            "Okay, I guess. I'm struggling with assignments right now. What's your name?"
+        }
+      ]
+    },
+    {
+      dialog: "",
+      emote: null,
+      buttons: []
+    },
+    {
+      dialog:
+        "Narrator: You've had a pretty good conversation. How will you close it off smoothly?",
+      emote: Emotes.neutral,
+      buttons: [
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text:
+            "Well hey, nice to meet you. Alright, I think I'll have a look over my notes before class."
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Okay, nice to meet you. Hey, can I add you on social media?"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Alright, I'm gonna get my stuff now."
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "You're weird. Alright, talk to you later!"
+        }
+      ]
+    },
+    {
+      dialog: "",
+      emote: null,
+      buttons: []
+    },
+    {
+      dialog:
+        "Narrator: You've had a decent first conversation with her. Now, you have someone who you can talk to again when you see her next!",
+      emote: Emotes.happy,
+      buttons: []
+    }
+  ];
+  return scenario;
+}
+
+export function getParkScenario(name) {
+  var scenario = [
+    {
+      dialog:
+        "You meet your new boss, Mr. Hoss, at the park by chance. You are walking opposite ways and he appears as though he wants to speak with you. How do you greet him?",
+      emote: Emotes.neutral,
+      buttons: []
+    },
+    {
+      dialog: "",
+      emote: Emotes.neutral,
+      buttons: [
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Hi, Mr. Hoss, how are you doing?"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Brad! What is up, my dude?"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Salutations, Mr. Hoss. How do you do?"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Why are you here? You’re rich!"
+        }
+      ]
+    },
+    {
+      dialog: "",
+      emote: null,
+      buttons: []
+    },
+    {
+      dialog: "How are you today, " + name + "?",
+      emote: Emotes.neutral,
+      buttons: [
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Dude, I’ve been watching Family Guy a lot more."
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Pretty good, actually. How’s your weekend?"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "My mom won’t stop nagging at me for not cleaning my room."
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Okay."
+        }
+      ]
+    },
+    {
+      dialog: "",
+      emote: null,
+      buttons: []
+    },
+    {
+      dialog:
+        "Well, I've been doing fine. How is that project that I assigned to you going?",
+      emote: Emotes.neutral,
+      buttons: [
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "I'm on track. It be done shortly."
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "It sucks. You shouldn't have given me it."
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "I haven't started it yet."
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Come off it!"
+        }
+      ]
+    },
+    {
+      dialog: "",
+      emote: null,
+      buttons: []
+    },
+    {
+      dialog:
+        "You’ve had both a friendly and a serious conversation so far. How do you close this off smoothly?",
+      emote: Emotes.neutral,
+      buttons: [
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Alright, well I’d better get on with my walk. Good seeing you!"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Bye! (walks away)"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text:
+            "Okay, I’ll keep that project in mind. Well, I’m gonna take off now. See you Monday!"
+        },
+        {
+          onClick: () => {
+            console.log("Pressed");
+          },
+          text: "Smell you later!"
+        }
+      ]
+    }
+  ];
+  return scenario;
+}
