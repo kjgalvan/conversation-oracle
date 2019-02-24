@@ -1,8 +1,11 @@
+html, body{
+    height:100%;
+}
 body{
-    height: 100%;
     margin: 0 0 0 0;
-    /*background-image: linear-gradient(to top, #7a93a5 0%, #bed3dd 100%);
-*/}
+    background-image: linear-gradient(to bottom right, #A9B2AC 50%, #717C79 50%);
+    
+}
 
 .Score{
     /*border: solid 2px;
@@ -19,9 +22,9 @@ body{
 
     margin:auto;
     border: solid 2px;
-    border-color:  #8896AB;
+    border-color:  #575761;
     border-radius: 5vh 5vh 5vh 5vh;
-    background-color:  #BACFE2;
+    background-color:  #9DA5A0;
     min-width: .3vh;
     min-height: .3vh;
     max-width: 100vh;
@@ -122,9 +125,9 @@ body{
 .Dialog{
     margin:auto;
     border: solid 2px;
-    border-color: #F2D68C;
+    border-color: #A1AFA0;
     border-radius: 3vh 3vh 3vh 3vh;
-    background-color: #FFFBF0;
+    background-color: #CBD4C2;
     min-width: .3vh;
     min-height: .3vh;
     width: 100vh;
@@ -137,6 +140,10 @@ body{
 
 .Dialog * p{
     margin-top: 1.2vh;
+}
+
+div.Dialog.col{
+    width: 50%;
 }
 
 .Submit{
@@ -158,6 +165,12 @@ body{
 }
 
 .ButtonOverride{
+    color: #26292f;
+    background-color: #A1AFA0;
+    border-color: #798478;
+}
+
+.ButtonOverride:hover{
     color: #26292f;
     background-color: #798478;
     border-color: #798478;

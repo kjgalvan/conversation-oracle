@@ -2,7 +2,7 @@
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3.5vh;
-    color: #336699;
+    color: #BACFE2;
     min-width: .3vh;
     min-height: .3vh;
 
@@ -23,36 +23,36 @@
 div.conversation{
     padding-left: .2vh;
     padding-right: 2.2vh;
-    color: #336699;
+    color: #898980;
     border-bottom-style: dotted;
     border-bottom-width: 4px;
-    border-bottom-color: #336699;
+    border-bottom-color: #575761;
 }
 
 div.oracle{
     padding-left: .2vh;
     padding-right: 2.2vh;
-    color: #336699;
+    color: #898980;
     border-bottom-style: dotted;
     border-bottom-width: 4px;
-    border-bottom-color: #336699;
+    border-bottom-color: #575761;
 }
 
 div.letterC{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', serif;
-    color: #6699cc;
+    color: #575761;
     padding-left: 2.2vh;
     padding-right: 2.2vh;
     font-size: 5vh;
-    border: 4px double;
+    border: 4px double #575761;
     border-radius: 5vh;
 }
 div.letterO{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', serif;
-    color:#6699cc;
+    color:#575761;
     padding-left: 2.2vh;
     padding-right: 2.2vh;
     font-size: 5vh;
-    border: 4px double;
+    border: 4px double #575761;
     border-radius: 5vh;
 }
