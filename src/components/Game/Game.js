@@ -82,33 +82,37 @@ class Game extends React.Component {
         if (this.state.character) {
           if (this.state.scenario[this.state.gameCounter]) {
             return (
-              <React.Fragment>
-                <Row>
-                  <Col className="Score" md={{size: 3, offset: 9}} >
-                    <Score points={this.state.points} />
-                  </Col>
-                </Row>
-                <Row>
-                  <Col>
-                    <Display className="d-flex justify-content-center Display Img" character={this.state.character} emote={this.state.scenario[this.state.gameCounter].emote} />
-                  </Col>
-                </Row>
-                <Row>
-                  <Col className="Dialog">
-                    <Dialog text={this.state.scenario ? this.state.scenario[this.state.gameCounter].dialog : "Please choose a scenario."} />
-                  </Col>
-                </Row>
-                <Row>
-                  <Buttons buttons={this.state.next} />
-                </Row>
-              </React.Fragment>
+              <Row>
+                <Col>
+                  <Row>
+                    <Col className="Score" md={{size: 3, offset: 9}} >
+                      <Score points={this.state.points} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <Display key={this.state.character} className="d-flex justify-content-center Display Img" character={this.state.character} emote={this.state.scenario[this.state.gameCounter].emote} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col className="Dialog">
+                      <Dialog text={this.state.scenario ? this.state.scenario[this.state.gameCounter].dialog : "Please choose a scenario."} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Buttons buttons={this.state.next} />
+                  </Row>
+                </Col>
+              </Row>
             );
           } else {
             return (
-              <React.Fragment>
-                <h1>Scenario Complete!</h1>
-                <p>Your final score was <b>{this.state.points}</b>.</p>
-              </React.Fragment>
+              <Row>
+                <Col>
+                  <h1>Scenario Complete!</h1>
+                  <p>Your final score was <b>{this.state.points}</b>.</p>
+                </Col>
+              </Row>
             );
           }
         } else {
@@ -117,10 +121,10 @@ class Game extends React.Component {
               <p>I want to talk to...</p>
               <Row className="DoubleDisplay">
                 <Col>
-                  <Display className="d-flex justify-content-center Img" character={Characters.nana} emote={Emotes.happy} />
+                  <Display key={this.state.character} className="d-flex justify-content-center Img" character={Characters.nana} emote={Emotes.happy} />
                 </Col>
                 <Col>
-                  <Display className="d-flex justify-content-center Img" character={Characters.popo} emote={Emotes.happy} />
+                  <Display key={this.state.character} className="d-flex justify-content-center Img" character={Characters.popo} emote={Emotes.happy} />
                 </Col>
               </Row>
               <Row>
@@ -138,16 +142,9 @@ class Game extends React.Component {
     } else {
       return (
         <React.Fragment>
-          <Row>
-            <Col>My name is...
-              <Input onBlur={this.setTempName} />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Button className="Submit" onClick={this.onSubmit}>Submit</Button>
-            </Col>
-          </Row>
+          My name is...
+          <Input onBlur={this.setTempName} />
+          <Button className="Submit" onClick={this.onSubmit}>Submit</Button>
         </React.Fragment>
       );
     }
@@ -157,11 +154,7 @@ class Game extends React.Component {
     const gameContent = this.getGameContent();
     return (
       <Container className="Game">
-        <Row>
-          <Col>
-            {gameContent}
-          </Col>
-        </Row>
+        {gameContent}
       </Container>
     );
   }
