@@ -12,7 +12,7 @@ import {
   getMarketScenario
 } from "../../helpers/scenarios";
 
-class Game extends React.Component {
+class Scenario extends React.Component {
   constructor(props) {
     super(props);
 
@@ -86,7 +86,7 @@ class Game extends React.Component {
 
   render() {
     if (this.state.scenario) {
-      if (this.state.scenario[this.state.gameCounter] || this.state.gameOver) {
+      if (this.state.scenario[this.state.gameCounter] && !this.state.gameOver) {
         return (
           <Row className="DisplayContainer">
             <Col>
@@ -172,4 +172,4 @@ class Game extends React.Component {
   }
 }
 
-export default Game;
+export default Scenario;
