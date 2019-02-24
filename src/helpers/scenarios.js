@@ -14,7 +14,7 @@ export function getGroceryScenario(name) {
         buttons: []
       },
       {
-        dialog: "Brian: Oh hey, " + name + "!",
+        dialog: `Oh hey, ${name}!`,
         emote: Emotes.happy,
         buttons: []
       },
@@ -169,7 +169,7 @@ export function getGroceryScenario(name) {
         buttons: []
       },
       {
-        dialog: "Narrator: At this point you notice Brian's shopping cart...",
+        dialog: "Narrator: At this point you notice their shopping cart...",
         emote: Emotes.neutral,
         buttons: [
           {
@@ -286,7 +286,7 @@ export function getGroceryScenario(name) {
               this.setState({
                 ...this.state,
                 gameCounter: gameCounter + 1,
-                points: points + 3,
+                points: points + 1,
                 response: {
                   dialog: "Oh um, I'm sorry to hear that...",
                   emote: Emotes.neutral,
@@ -329,14 +329,14 @@ export function getGroceryScenario(name) {
               this.setState({
                 ...this.state,
                 gameCounter: gameCounter + 1,
-                points: points + 2,
+                points: points + 3,
                 response: {
                   dialog: "Okay then, have a good day!",
                   emote: Emotes.happy,
                   }
               });
             },
-            text: "Well it was great talking to you, but I have to get going see you! "
+            text: "Well it was great talking to you, but I have to get going. See you! "
           },
           {
             onClick: () => {
@@ -345,9 +345,9 @@ export function getGroceryScenario(name) {
               this.setState({
                 ...this.state,
                 gameCounter: gameCounter + 1,
-                points: points + 4,
+                points: points + 1,
                 response: {
-                  dialog: "(Brian watches you walk away)",
+                  dialog: "(They watch you walk away)",
                   emote: Emotes.neutral,
                   }
               });
@@ -355,7 +355,7 @@ export function getGroceryScenario(name) {
             text: "(Walk away) "
           },
           {
-            onClick: () => { 
+            onClick: () => {
               const { gameCounter } = this.state;
               const { points } = this.state;
               this.setState({
@@ -424,7 +424,7 @@ export function getGroceryScenario(name) {
         buttons: []
       },
       {
-        dialog: "When you don’t contribute or avoid the conversation you miss out on this valuable part of life.",
+        dialog: "When you don’t contribute or avoid the conversation, you miss out on this valuable part of life.",
         emote: Emotes.neutral,
         buttons: []
       }
@@ -437,12 +437,12 @@ export function getSchoolScenario(name) {
     // buttons
     {
       dialog:
-        "Narrator: You are at school, sitting next to a girl who you don't know, five minutes before class starts",
+        "Narrator: You are at school, sitting next to someone you don't know, five minutes before class starts",
       emote: Emotes.neutral,
       buttons: []
     },
     {
-      dialog: "You want to start a conversation with her.",
+      dialog: "You want to start a conversation with them.",
       emote: Emotes.neutral,
       buttons: [
         {
