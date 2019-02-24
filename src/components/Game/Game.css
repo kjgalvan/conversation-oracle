@@ -172,16 +172,17 @@ body{
 
 .ButtonOverride{
     height: 100%;
-    color: #7A747F;
-    background-color: #CBC0D3;
-    border-color: #948C9A;
-}
-
-.ButtonOverride:hover{
     color: #FEEAFA;
     border: 2px solid;
     background-color: #948C9A;
-    border-color: #948C9A;
+    border-color: rgb(93, 87, 97);
+}
+
+.ButtonOverride:hover{
+    color: #7A747F;
+    border: 2px solid;
+    background-color: #CBC0D3;
+    border-color: rgb(93, 87, 97);
 }
 
 .row {
