@@ -3,7 +3,7 @@ import React from 'react';
 class Dialog extends React.Component {
   render(){
     return(
-      <div>
+      <div className={this.props.className}>
         <p>{this.props.text}</p>
       </div>
     );

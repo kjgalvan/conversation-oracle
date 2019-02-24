@@ -1,5 +1,4 @@
 import React from 'react';
-import './Display.css';
 import { Emotes, Characters } from '../../helpers/enums';
 import nanaNeutral from '../../images/nana-neutral.png';
 import nanaHappy from '../../images/nana-happy.png';
@@ -33,9 +32,9 @@ class Display extends React.Component{
     const { character, emote } = this.props;
     const imageSrc = this.getImageSrc(character, emote);
     return (
-      <React.Fragment>
-        {(character && emote) ? <img className="Display" src={imageSrc} alt={`${character}-${emote}`} /> : null}
-      </React.Fragment>
+      <div className={this.props.className}>
+        {(character && emote) ? <img src={imageSrc} alt={`${character}-${emote}`} /> : null}
+      </div>
     );
   }
 }

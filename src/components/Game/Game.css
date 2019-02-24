@@ -6,6 +6,11 @@
     min-height: .3vh;
 }
 .Game{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    
+
     margin:auto;
     border: solid 2px;
     border-color:  #336699;
@@ -13,13 +18,17 @@
     background-color:  #6699cc;
     min-width: .3vh;
     min-height: .3vh;
-    width: 95%;
-}
-.Display{
+
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
-
+}
+.Display{
     border-left-style: double;
     border-left-color: white;
     border-left-width: 15px;
@@ -53,7 +62,56 @@
     -moz-background-clip: content;     /* Firefox 3.6 */
     -webkit-background-clip: content;  /* Safari 4? Chrome 6? */
     background-clip: content-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+  
+    align-items: center;
+
 }
+
+.Img > img {
+    width: 50%;
+    height: 50%;
+}
+
+.DoubleDisplay {
+    border-left-style: double;
+    border-left-color: white;
+    border-left-width: 15px;
+    /*S
+    border-bottom-style: solid ;
+    border-bottom-color: white;
+    border-bottom-width: 4px;*/
+
+    border-top-style: double;
+    border-top-color: white;
+    border-top-width: 15px;
+
+    border-right-style: double;
+    border-right-color: white;
+    border-right-width: 15px;
+   
+    border-radius: 5vh 5vh 0vh 0vh;
+    background-color: white;
+    
+    margin-left: .2vh;
+    margin-right: .2vh;
+
+
+    /* Removes the color behind the border */
+    -moz-background-clip: border;     /* Firefox 3.6 */
+    -webkit-background-clip: border;  /* Safari 4? Chrome 6? */
+    background-clip: border-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+				
+    -moz-background-clip: padding;     /* Firefox 3.6 */
+    -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+    background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+				
+    -moz-background-clip: content;     /* Firefox 3.6 */
+    -webkit-background-clip: content;  /* Safari 4? Chrome 6? */
+    background-clip: content-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+
+}
+
+
 .Dialog{
     margin:auto;
     border: solid 2px;
@@ -66,4 +124,8 @@
 .Submit{
     margin-top: 5px;
     float: right;
+}
+
+.Game > button{
+    justify-content: space-evenly;
 }

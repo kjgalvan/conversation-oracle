@@ -120,7 +120,11 @@ class Game extends React.Component {
                   <Display character={Characters.nana} emote={Emotes.happy} />
                 </Col>
                 <Col>
+<<<<<<<
                   <Display character={Characters.popo} emote={Emotes.happy} />
+=======
+                  <Display className="d-flex justify-content-center Display Img" character={this.state.character} emote={this.state.scenario[this.state.gameCounter].emote} />
+>>>>>>>
                 </Col>
               </Row>
               <Row>
