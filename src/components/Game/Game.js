@@ -8,6 +8,7 @@ import Buttons from '../Buttons';
 import { Scenario, Emotes, Characters } from '../../helpers/enums';
 import {
   getGroceryScenario,
+  getSchoolScenario,
 } from '../../helpers/scenarios';
 
 class Game extends React.Component {
@@ -58,9 +59,8 @@ class Game extends React.Component {
       case Scenario.grocery: {
         return this.getGroceryScenario(this.props.name);
       }
-
       case Scenario.school: {
-        return this.getGroceryScenario(this.props.name);
+        return this.getSchoolScenario(this.props.name);
       }
       default: break;
     }
