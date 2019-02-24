@@ -85,7 +85,7 @@ class Game extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Buttons buttons={this.state.next} />
+                <Buttons buttons={this.state.scenario[this.state.gameCounter].buttons.length == 0 ? this.state.next : this.state.scenario[this.state.gameCounter].buttons} />
               </Row>
             </Container>
           );
