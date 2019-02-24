@@ -1,11 +1,41 @@
 import React from 'react';
+import './Display.css';
+import { Emotes, Characters } from '../../helpers/enums';
+import nanaNeutral from '../../images/nana-neutral.png';
+import nanaHappy from '../../images/nana-happy.png';
+import nanaSad from '../../images/nana-sad.png';
+import popoNeutral from '../../images/popo-neutral.png';
+import popoHappy from '../../images/popo-happy.png';
+import popoSad from '../../images/popo-sad.png';
 
 class Display extends React.Component{
-  render(){
-    return(
-      <div>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Chuck_Norris_May_2015.jpg/220px-Chuck_Norris_May_2015.jpg" />
-      </div>
+  getImageSrc = (character, emote) => {
+    switch (character) {
+      case Characters.nana:
+        switch (emote) {
+          case Emotes.neutral: return nanaNeutral;
+          case Emotes.happy: return nanaHappy;
+          case Emotes.sad: return nanaSad;
+          default: return nanaNeutral;
+        }
+      case Characters.popo:
+        switch (emote) {
+          case Emotes.neutral: return popoNeutral;
+          case Emotes.happy: return popoHappy;
+          case Emotes.sad: return popoSad;
+          default: return popoNeutral;
+        }
+      default: return nanaNeutral;
+    }
+  }
+
+  render() {
+    const { character, emote } = this.props;
+    const imageSrc = this.getImageSrc(character, emote);
+    return (
+      <React.Fragment>
+        {(character && emote) ? <img className="Display" src={imageSrc} alt={`${character}-${emote}`} /> : null}
+      </React.Fragment>
     );
   }
 }

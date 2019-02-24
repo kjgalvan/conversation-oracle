@@ -1,10 +1,15 @@
 export const Scenario = {
   grocery: "GROCERY",
-  school: "SCHOOL"
+  school: "SCHOOL",
 }
 
 export const Emotes = {
-  happy: "HAPPINESS",
-  neutral: "NEUTRAL",
-  sad: "SAD",
+  happy: "happy",
+  neutral: "neutral",
+  sad: "sad",
+}
+
+export const Characters = {
+  popo: "popo",
+  nana: "nana",
 }

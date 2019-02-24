@@ -53,28 +53,31 @@ class Game extends React.Component {
   }
 
   render() {
-    return (
-      <Container className="Game">
-        <Row>
-          <Col className="Score" md={{size: 3, offset: 9}} >
-            <Score points="97" />
-          </Col>
-        </Row>
-        <Row className="Display" >
-          <Col>
-            <Display  />
-          </Col>
-        </Row>
-        <Row>
-          <Col className="Dialog">
-            <Dialog  />
-          </Col>
-        </Row>
-        <Row>
-          <Buttons buttons={this.state.next} />
-        </Row>
-      </Container>
-    );
+    if (this.state.scenario && this.props.name) {
+      return (
+        <Container className="Game">
+          <Row>
+            <Col className="Score" md={{size: 3, offset: 9}} >
+              <Score points="97" />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Display className="Display" character={this.props.character} emote={this.state.scenario[this.state.gameCounter].emote} />
+            </Col>
+          </Row>
+          <Row>
+            <Col className="Dialog">
+              <Dialog  />
+            </Col>
+          </Row>
+          <Row>
+            <Buttons buttons={this.state.next} />
+          </Row>
+        </Container>
+      );
+    }
+    else return null;
   }
 }
 

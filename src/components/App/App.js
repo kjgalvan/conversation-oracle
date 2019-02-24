@@ -9,6 +9,7 @@ class App extends Component {
     this.state = {
       name: "",
       scenario: null,
+      character: "nana",
     }
   }
 
@@ -23,7 +24,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navigation onClick={this.setScenario} />
-        <Game name="John" scenario={this.state.scenario} />
+        <Game name="John" character={this.state.character} scenario={this.state.scenario} />
       </React.Fragment>
     );
   }
