@@ -450,6 +450,7 @@ export function getGroceryScenario(name, character) {
 
   return scenario;
 }
+
 export function getSchoolScenario(name) {
   var scenario = [
     // buttons

@@ -8,7 +8,7 @@ import {
 class Header extends React.Component {
   render() {
     return (
-      <Navbar className= "Nav">
+      <Navbar className="Nav">
         <NavbarBrand href="/" className= "logo">
           <div className= "letterC">C</div>
           <div className ="conversation">onversation </div>

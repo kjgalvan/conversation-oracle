@@ -9,16 +9,6 @@
     display: inline-flex;
     justify-content: center;
     align-items: flex-end;
-    
-    /*
-    border-left-style: double;
-    border-left-width: 4px;
-    border-left-color: #336699;
-    border-bottom-style: double;
-    border-bottom-width: 4px;
-    border-bottom-color: #336699;
-    border-bottom-left-radius: 4vh;
-    */
 }
 div.conversation{
     padding-left: .2vh;
