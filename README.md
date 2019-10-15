@@ -1,5 +1,5 @@
 # Conversation Oracle
-### Coding Cougs 2019
+### CrimsonCode 2019
 
 A mobile-friendly web game that teaches gamers how to have conversations.
 
